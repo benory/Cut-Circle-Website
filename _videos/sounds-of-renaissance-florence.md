@@ -4,7 +4,7 @@ image: /assets/images/recording-sounds-florence.jpg
 image_alt: Sounds of Renaissance Florence
 vimeo_url: https://player.vimeo.com/video/555476875?h=449cfb20dc
 order: 3
-sort_date: 2021-06-03T05:58:36
+sort_date: '2021-06-03T05:58:36'
 excerpt: A film recapturing the soundscape of fifteenth-century Florence.
 featured_artists:
   - jonas-budris
