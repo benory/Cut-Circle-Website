@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="catalog-item artist-profile{% if page.archived %} artist-profile--catalogue{% endif %}">
+  <header class="page-header artist-profile__header">
+    <div class="content-width">
+      <p class="eyebrow">Artist</p>
+      <h1>{{ page.title }}{% if page.subtitle %}<span>, {{ page.subtitle }}</span>{% endif %}</h1>
+    </div>
+  </header>
+  <div class="content-width artist-profile__layout">
+    {% if page.image %}
+      <aside class="artist-profile__portrait">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      </aside>
+    {% endif %}
+    <div class="prose artist-profile__biography">
+      <h2>Meet {{ page.given_name | default: page.title }}</h2>
+      {{ content }}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="about-page">
+  <header class="about-hero content-width" style="--about-image: url('{{ page.hero_image | relative_url }}')">
+    <h1>{{ page.hero_title | default: page.title }}</h1>
+  </header>
+
+  <div class="about-layout content-width">
+    <div class="about-main prose">
+      {{ content }}
+
+      {% if page.gallery %}
+        <div class="about-gallery" aria-label="Cut Circle in performance and rehearsal">
+          {% for photo in page.gallery %}
+            <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt }}" loading="lazy" width="300" height="300">
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>

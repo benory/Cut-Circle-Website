@@ -1,0 +1,17 @@
+<div class="audio-track" data-audio-player>
+  <div class="audio-controls">
+    <button class="audio-play" type="button" aria-label="Play {{ include.track.title | strip_html }}">
+      <svg class="audio-play__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 3 11 7-11 7Z"/></svg>
+      <svg class="audio-pause__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h4v14H5zm6 0h4v14h-4z"/></svg>
+    </button>
+    <time class="audio-current" datetime="PT0M0S">00:00</time>
+    <input class="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Track position">
+    <time class="audio-duration" datetime="PT0M0S">00:00</time>
+    <button class="audio-mute" type="button" aria-label="Mute">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="sound-wave" d="M16 8.2c1 .9 1.5 2.2 1.5 3.8S17 14.9 16 15.8M18.6 5.7c1.8 1.6 2.8 3.7 2.8 6.3s-1 4.7-2.8 6.3"/></svg>
+    </button>
+    <input class="audio-volume" type="range" min="0" max="1" value="1" step="0.05" aria-label="Volume">
+  </div>
+  <p class="audio-title">{{ include.track.title }}</p>
+  <audio preload="metadata" src="{{ include.track.file | relative_url }}"></audio>
+</div>

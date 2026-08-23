@@ -1,0 +1,20 @@
+---
+title: Cut Circle Scores Anew in Anonymous Masses
+source: Early Music America
+review_date: January 10, 2022
+sort_date: '2022-01-10'
+author: Karen Cook
+excerpt: Last March, I had the pleasure of reviewing the then-latest release from
+  acclaimed American ensemble Cut Circle — a fantastic double-disc tour through the
+  songs of Johannes Ockeghem…
+---
+
+<p>Last March, I had the pleasure of reviewing the then-latest release from acclaimed American ensemble Cut Circle — a fantastic double-disc tour through the songs of Johannes Ockeghem (c.1420–97). In that <a href="https://www.earlymusicamerica.org/web-articles/cd-review-ockeghem-chansons-bring-out-cut-circles-best/">review</a>, I commended the ensemble for their clarity of enunciation, approach to tempo, phrasing and blend, sparing use of vibrato, and the intensely intimate space created by their close miking. Although it had yet to be released, I could just as easily have been talking about this new recording, the group’s fourth. Here, the ensemble moves away from secular song to tackle quite a different repertory: two challenging and complex anonymous 15th-century Masses.</p>
+<p>These Masses have much in common aside from their shared lack of attribution. Both use contemporaneous love songs as a cantus firmus: the <em>Missa Gross</em> <em>senen</em> borrows the German lied “Gross senen ich in Herzen trag,” while the <em>Missa L’ardant desir’</em>s eponymous chanson apparently has not survived. Both are transmitted in only one source, in technically complex — and occasionally perplexing — notation, and both have their share of copying errors, which likely explains why neither has yet been recorded. (The copyist for <em>Missa Gross senen</em>, for example, apparently forgot to copy the altus voice in a section of the Gloria, which director <a href="/artist/jesse-rodin/">Jesse Rodin</a> reconstructed for this recording.) In each Mass, therefore, movements begin somewhat calmly before building in tension and suspense, upper voices swirling intricately around the long-held tenor, a mélange of sustained melodic lines, punchy rhythms, and shifting mensural sands.</p>
+<p>The aforementioned close miking really puts the singers on the spot: There is no room here for error, but, fortunately, we never hear one. The bright, occasionally almost nasal sound creates a sense of directness and precision without ever grating on the ear, and the minimal reverberation places the listener directly in the front pew of the side chapel in which these works would have been sung. The singers all exhibit an amazing sense of control; in lesser hands, or lungs, these works would run out of steam halfway through, but the breath, tone, and phrasing are superb.</p>
+<p>Listen, for example, to the mesmerizing central duet section of the <em>Missa L’ardant desir</em>’s “Sanctus.” The tricky transitions are just about seamless, as in the “Gloria” and “Credo” of the same Mass, and the short sections of fauxbourdon throughout those movements really catch the ear. The long lines, especially in the lower voices, always have shape and purpose, and even in an already dense and boisterous texture, individual voices bring out the beginnings of new words or phrases admirably. The little repeating motives at the beginning of the “Sanctus” of the <em>Missa Gross senen</em> are entrancing, while its second “Agnus Dei” is a breath of fresh air.</p>
+<p>In short, the ensemble sings this material with utter conviction. My only critique isn’t a critique at all but a wish: I’d have loved to have heard the two songs that form the basis for these Masses, reconstructed or not. With two albums of such high quality from Cut Circle within a year, I await with bated breath their 2022 Josquin album and hope they might consent to delve into more of this anonymous, unrecorded material in the near future.</p>
+
+
+
+<p><em>Karen Cook specializes in the music, theory, and notation of the late medieval and early Renaissance periods. She is assistant professor of music at the University of Hartford in Connecticut.</em></p>

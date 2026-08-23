@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="feasting-post">
+  <header class="page-header">
+    <div class="content-width">
+      <p class="eyebrow">Feasting Course Blog</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.context %}<p class="page-subtitle">{{ page.context }}</p>{% endif %}
+    </div>
+  </header>
+  <div class="content-width feasting-post__layout">
+    <main class="prose feasting-post__body">
+      {{ content }}
+
+      <section class="more-feasting" aria-labelledby="more-feasting-heading">
+        <h2 id="more-feasting-heading">More to explore</h2>
+        <div class="more-feasting__grid">
+          {% assign post_entries = site.feasting | sort: 'date' | reverse %}
+          {% assign post_count = 0 %}
+          {% for post in post_entries %}
+            {% if post.url != page.url and post_count < 3 %}
+              <a href="{{ post.url | relative_url }}"><small>{{ post.context }}</small><strong>{{ post.title }}</strong>{% if post.excerpt %}<span>{{ post.excerpt | strip_html | truncate: 115 }}</span>{% endif %}</a>
+              {% assign post_count = post_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+
+      <p class="back-link"><a href="{{ '/blog/' | relative_url }}">Back to the Feasting Course Blog</a></p>
+    </main>
+  </div>
+</article>

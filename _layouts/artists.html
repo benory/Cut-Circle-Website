@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<section class="artists-page">
+  <header class="artists-hero content-width">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <div class="artists-layout content-width">
+    <main class="artists-main">
+      {% assign artists = site.artists | sort: 'order' %}
+
+      <section aria-labelledby="current-artists-heading">
+        <h2 id="current-artists-heading">Featured on Recent Albums</h2>
+        <div class="current-artists-grid">
+          {% for artist in artists %}
+            {% unless artist.archived %}
+              <article class="current-artist-card">
+                <a href="{{ artist.url | relative_url }}">
+                  <img src="{{ artist.image | relative_url }}" alt="{{ artist.image_alt | default: artist.title }}" loading="lazy">
+                  <div class="current-artist-card__body">
+                    <h3>{{ artist.title }}</h3>
+                    <p>{{ artist.subtitle }}</p>
+                  </div>
+                </a>
+              </article>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="catalogue-artists" aria-labelledby="catalogue-artists-heading">
+        <h2 id="catalogue-artists-heading">Featured in Cut Circle’s Recording Catalogue</h2>
+        <div class="catalogue-artists-grid">
+          {% for artist in site.data.former_artists %}
+            <div class="catalogue-artist">
+              <span class="catalogue-artist__name">{{ artist.name }}</span>
+              <span class="catalogue-artist__role">{{ artist.role }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+  </div>
+</section>

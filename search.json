@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /search.json
+---
+{% assign entries = site.pages | concat: site.recordings | concat: site.artists | concat: site.events | concat: site.reviews | concat: site.videos | concat: site.feasting %}
+[
+{% assign first_entry = true %}
+{% for item in entries %}
+  {% if item.title and item.redirect_to == nil and item.url != '/404.html' and item.url != '/search/' %}
+    {% unless first_entry %},{% endunless %}
+    {
+      "title": {{ item.title | jsonify }},
+      "url": {{ item.url | relative_url | jsonify }},
+      "section": {{ item.section | default: item.collection | default: 'Page' | capitalize | jsonify }},
+      "excerpt": {{ item.excerpt | default: item.description | default: item.content | strip_html | normalize_whitespace | truncate: 220 | jsonify }},
+      "content": {{ item.content | strip_html | normalize_whitespace | jsonify }}
+    }
+    {% assign first_entry = false %}
+  {% endif %}
+{% endfor %}
+]

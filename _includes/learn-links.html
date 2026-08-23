@@ -1,0 +1,7 @@
+<nav class="about-rail__nav" aria-label="Learn">
+  <a{% if page.url == '/about/' %} class="is-current"{% endif %} href="{{ '/about/' | relative_url }}">About</a>
+  <a{% if page.url == '/reviews/' %} class="is-current"{% endif %} href="{{ '/reviews/' | relative_url }}">Reviews</a>
+  <a{% if page.url == '/artist/jesse-rodin/' %} class="is-current"{% endif %} href="{{ '/artist/jesse-rodin/' | relative_url }}">Our Music Director</a>
+  <a{% if page.url == '/artists/' %} class="is-current"{% endif %} href="{{ '/artists/' | relative_url }}">Artists</a>
+  <a href="https://www.josqu.in/repertoire/?texted=true">Scores</a>
+</nav>

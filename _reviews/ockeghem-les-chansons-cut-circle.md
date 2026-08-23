@@ -1,0 +1,15 @@
+---
+title: 'EDITOR’S CHOICE (Johannes Ockeghem : Les Chansons)'
+source: Gramophone
+review_date: January 4, 2021
+sort_date: '2021-01-04'
+author: David Fallows
+excerpt: This is pathbreaking. Certainly Cut Circle are not the first to sing late
+  15th-century songs without instrumental participation. The Orlando Consort did it
+  for two discs of Loyset…
+---
+
+<p>This is pathbreaking. Certainly Cut Circle are not the first to sing late 15th-century songs without instrumental participation. The Orlando Consort did it for two discs of Loyset Compère (Metronome, 6/94; Hyperion, 8/15); and The Sound and the Fury did it for a few pieces on their set of music by Firminus Caron (Fra Bernardo, 10/13). But there is something quite new about the way Cut Circle resist any kind of external contrasts to ‘vary’ the sound. They present all known secular songs of Ockeghem, leaving out only those that appear with ascriptions to Ockeghem but are almost certainly by others. They do them all with full forms (texts reconstructed when necessary, by <em>Gramophone</em>’s own Fabrice Fitch). They are also more aggressive with their text-enunciation than we are used to hearing in this repertory; and that seems to me a massive improvement.</p>
+<p>They have two women new to the group, Sonja DuToit Tengblad and Clare McNamara, both with astonishing voice-ranges and ranges of articulation. For the lowest voices they have two marvellous singers who have been with Cut Circle all along, Bradford Gleim and Paul Max Tipton. It seems to me that this is not only sung with beautiful balance and intonation throughout but that the tempos are perfectly judged, with lots of lovely space within the lines and between the stanzas.</p>
+<p>Like all issues from Musique en Wallonie, it is beautifully presented, with translations of all texts into four languages (the English translations by Professor Adrian Armstrong), with reproductions from the main manuscripts concerned and a highly informative essay by their director, Jesse Rodin. I think this recording sets new standards for the recording of such music and will be a model for many more to come.</p>
+<p>These are obviously good times for those who love Ockeghem songs; and there are very few better songs from the 15th century. Only last year there was a CD from another Boston-based group, Blue Heron (1/20), who have promised to issue one more to complete their Ockeghem set. Blue Heron have a lot of the same qualities as Cut Circle, particularly in terms of space and excitement: that is to say that this too is very good indeed. Only in the combinative chanson <em>S’elle m’amera</em>/<em>Petite camusette</em> do Blue Heron seem to me to have the edge in conveying the song’s lightness of touch better. Both groups, I’m sorry to say, overlook the obvious emendation in <em>O rosa bella</em> published by Alexander Erhard in 2010 and again by me in 2014. But the main difference is that Cut Circle add text to all lines throughout, which adds enormously to the music’s impact.</p>

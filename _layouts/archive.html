@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="archive-page">
+  <header class="page-header{% if page.hero_image %} page-header--image{% endif %}"{% if page.hero_image %} style="--page-image: url('{{ page.hero_image | relative_url }}'); background-position: {{ page.hero_position | default: 'center' }};"{% endif %}>
+    <div class="content-width">
+      <h1>{{ page.title }}</h1>
+      {% if page.intro %}<p class="page-subtitle">{{ page.intro }}</p>{% endif %}
+    </div>
+  </header>
+  <div class="content-width archive-layout">
+    <div class="archive-grid{% if page.card_style %} archive-grid--{{ page.card_style }}{% endif %}">
+      {% assign sort_key = page.sort_by | default: 'order' %}
+      {% assign entries = site[page.collection_name] | sort: sort_key %}
+      {% if page.reverse %}{% assign entries = entries | reverse %}{% endif %}
+      {% for entry in entries %}
+        <article class="archive-card archive-card--{{ page.collection_name }}">
+          <a href="{{ entry.url | relative_url }}">
+            {% if entry.image %}<img src="{{ entry.image | relative_url }}" alt="{{ entry.image_alt | default: entry.title }}">{% endif %}
+            <div class="archive-card__body">
+              {% if entry.event_date %}<p class="archive-card__meta">{{ entry.event_date }}{% if entry.event_time %} · {{ entry.event_time }}{% endif %}</p>{% endif %}
+              {% if entry.source %}<p class="archive-card__meta">{{ entry.source }}{% if entry.review_date %} · {{ entry.review_date }}{% endif %}</p>{% endif %}
+              {% if entry.context %}<p class="archive-card__meta">{{ entry.context }}</p>{% endif %}
+              <h2>{{ entry.title }}</h2>
+              {% if entry.excerpt %}<p>{{ entry.excerpt | strip_html }}</p>{% endif %}
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

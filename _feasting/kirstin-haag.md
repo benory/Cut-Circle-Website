@@ -1,0 +1,13 @@
+---
+title: Kirstin Haag
+date: '2017-06-28T07:46:51'
+context: Stanford University’s Feasting Course
+excerpt: This Friday, I was on the Sops Team in the kitchen. In an attempt to cook
+  more efficiently, we divided to conquer…and in less than half an hour, we were nearly
+  finished. Just a quick…
+---
+
+<p>This Friday, I was on the Sops Team in the kitchen. In an attempt to cook more efficiently, we divided to conquer…and in less than half an hour, we were nearly finished. Just a quick taste-test, and we could plate the dish. Then came the problem of the sugar: for nearly another half hour, we debated the ratio of spices to sugar. The recipe had called for equal amounts of everything, but tasted far too strong when sprinkled on the sops. We all had different solutions, citing different (and suddenly conflicting) class discussions – add a little sugar, since medieval spices would have travelled further and been less potent; leave it as is, we shouldn’t change the recipe based on our modern taste buds; add a ton of sugar, since it was good for the humors anyway; ignore the recipe and cook the spices and sugar with the milk. As far as I know, none of these suggestions were wrong, but that didn’t mean we could agree. This mirrors a larger scholarly debate about how to read and cook medieval recipes, a debate that I wasn’t entirely sympathetic to until Friday evening.</p>
+<p>Eventually, we consulted a comparison of similar recipes and discovered that these largely had only two things in common regarding the spice mixture: that it must contain sugar and that it must be sprinkled on at the end, not cooked in the milk. When we ran out of time to decide, we simply provided four versions of the spice mixture, so each diner could choose for himself.</p>
+<p>This conflict demonstrated – in real time – the kinds of decisions that need to be made about these medieval recipes. It also correlates strongly with the kinds of problems one encounters when editing medieval music manuscripts (a related topic of the evening). When, suddenly, the counterpoint seems wildly distasteful, we must ask: is one of the notes wrong? Did they have different ideas of appropriate harmonies? Is this a representation of the original song, or was it recomposed? Is it just scribal error? Questions of taste are clearly important in both musical and gastronomic fields, and this is one of the many reasons I often find myself comparing the two.</p>
+<p>With a little more practice and a little more intense study of medieval gastronomic texts, I suspect that we might have been able to find the most likely answer to the sugar debate. For now, it highlights both the kinds and amount of questions necessary to answer a simple question: how much sugar?</p>

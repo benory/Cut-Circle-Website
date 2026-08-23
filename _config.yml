@@ -1,0 +1,78 @@
+title: Cut Circle
+email: info@cutcircle.org
+description: Cut Circle brings the music of the fifteenth and early sixteenth centuries to life.
+url: https://cutcircle.org
+baseurl: ""
+lang: en
+permalink: pretty
+
+collections:
+  recordings:
+    output: true
+    permalink: /recordings/:name/
+  artists:
+    output: true
+    permalink: /artist/:name/
+  reviews:
+    output: true
+    permalink: /reviews/:name/
+  events:
+    output: true
+    permalink: /events/:name/
+  videos:
+    output: true
+    permalink: /videos/:name/
+  feasting:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: recordings
+    values:
+      layout: recording
+      section: Recordings
+  - scope:
+      path: ""
+      type: artists
+    values:
+      layout: artist
+      section: Artists
+
+  - scope:
+      path: ""
+      type: reviews
+    values:
+      layout: review
+      section: Reviews
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+      section: Events
+  - scope:
+      path: ""
+      type: videos
+    values:
+      layout: video
+      section: Videos
+  - scope:
+      path: ""
+      type: feasting
+    values:
+      layout: feasting-post
+      section: Community Feasting Project
+
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - migration

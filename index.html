@@ -1,0 +1,35 @@
+---
+layout: default
+description: Cut Circle animates Renaissance music through acclaimed recordings and performances.
+body_class: home
+---
+<section class="home-hero">
+  <div class="home-hero__overlay"></div>
+  <div class="home-hero__inner content-width">
+    <div class="home-hero__panel">
+      <p class="eyebrow home-hero__eyebrow">New album</p>
+      <h1>JOSQUIN, <span>volume II</span></h1>
+      <p>The second entry in Cut Circle’s Josquin cycle, featuring stunning sacred music from his first working decade as a composer</p>
+      <a class="button" href="{{ '/recordings/josquin-ii/' | relative_url }}">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-intro content-width">
+  <div class="home-intro__about">
+    <h2>Cut Circle animates Renaissance music</h2>
+    <div class="quotes">
+      <blockquote>“Gloriously invigorating . . . Cut Circle’s superb energy is quite addictive.” <cite>–Gramophone</cite></blockquote>
+      <blockquote>“A rare pearl in the panorama of American early music groups.” <cite>–Medioevo (Italy)</cite></blockquote>
+      <blockquote>“Cut Circle makes the emotions audible.” <cite>–BR Klassik (Germany)</cite></blockquote>
+      <blockquote>“Go attend one of their concerts as soon as you can.” <cite>–San Francisco Classical Voice</cite></blockquote>
+    </div>
+    <a class="text-link" href="{{ '/about/' | relative_url }}">Learn More &gt;</a>
+  </div>
+  <div class="home-intro__audio">
+    {% for track in site.data.home_audio %}
+      {% include audio-player.html track=track %}
+    {% endfor %}
+  </div>
+</section>
+

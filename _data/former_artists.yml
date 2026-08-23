@@ -1,0 +1,42 @@
+- name: Matthew Anderson
+  slug: matthew-anderson
+  role: Tenor
+- name: Michael Barrett
+  slug: michael-barrett
+  role: Tenor
+- name: Carolann Buff
+  slug: carolann-buff
+  role: Soprano
+- name: Marc Busnel
+  slug: marc-busnel
+  role: Bass
+- name: Mary Gerbi
+  slug: mary-gerbi
+  role: Soprano
+- name: David McFerrin
+  slug: david-mcferrin
+  role: Bass
+- name: Clare McNamara
+  slug: clare-mcnamara
+  role: Soprano
+- name: Jason McStoots
+  slug: jason-mcstoots
+  role: Tenor
+- name: Marc Molomot
+  slug: marc-molomot
+  role: Tenor
+- name: John Proft
+  slug: john-proft
+  role: Bass
+- name: Aaron Sheehan
+  slug: aaron-sheehan
+  role: Tenor
+- name: Steven Soph
+  slug: steven-soph
+  role: Tenor
+- name: Christopher Talbot
+  slug: christopher-talbot
+  role: Bass
+- name: Sumner Thompson
+  slug: sumner-thompson
+  role: Bass

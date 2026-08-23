@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="learn-page">
+  <header class="page-header{% if page.hero_image %} page-header--image{% endif %}"{% if page.hero_image %} style="--page-image: url('{{ page.hero_image | relative_url }}'); background-position: {{ page.hero_position | default: 'center' }};"{% endif %}>
+    <div class="content-width">
+      <p class="eyebrow">Learn</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+    </div>
+  </header>
+
+  <div class="content-width learn-page__layout">
+    <main class="prose learn-page__body">{{ content }}</main>
+  </div>
+</article>

@@ -1,0 +1,36 @@
+- label: About
+  url: /about/
+  children:
+    - label: About Ensemble
+      url: /about/
+    - label: Reviews
+      url: /reviews/
+    - label: Our Music Director
+      url: /artist/jesse-rodin/
+    - label: Artists
+      url: /artists/
+    - label: Auditions
+      url: /about/auditions/
+    - label: Contact
+      url: /contact/
+- label: Josquamp
+  url: /summerinstitute/
+- label: Listen
+  url: /recordings/
+  children:
+    - label: Recordings
+      url: /recordings/
+    - label: Videos
+      url: /videos/
+- label: Events
+  url: /events/
+  children:
+    - label: Community Feasting
+      url: /community-feasting-project/
+- label: Scores
+  url: https://www.josqu.in/repertoire/?texted=true
+  external: true
+- label: Subscribe
+  url: mailto:info@cutcircle.org?subject=Subscribe%20me%20to%20Cut%20Circle%20news
+  external: true
+  new_window: false

@@ -1,0 +1,16 @@
+<aside class="about-rail listen-rail" aria-label="Explore Cut Circle recordings">
+  <section>
+    <h2>Listen</h2>
+    <nav class="about-rail__nav" aria-label="Listen">
+      <a href="{{ '/recordings/' | relative_url }}">Recordings</a>
+      <a href="{{ '/videos/' | relative_url }}">Videos</a>
+    </nav>
+  </section>
+
+  {% include subscribe-cta.html %}
+
+  <section class="about-connect">
+    <h2>Connect</h2>
+    {% include social-links.html label="Connect with Cut Circle" %}
+  </section>
+</aside>

@@ -1,0 +1,21 @@
+{% if page.featured_artists %}
+  <section class="featured-artists" aria-labelledby="featured-artists-heading">
+    <h2 id="featured-artists-heading">Featured Artists</h2>
+    <div class="featured-artists__grid">
+      {% for artist_slug in page.featured_artists %}
+        {% assign current_artist = site.artists | where: 'slug', artist_slug | first %}
+        {% assign former_artist = site.data.former_artists | where: 'slug', artist_slug | first %}
+        {% if current_artist %}
+          <a class="featured-artist" href="{{ current_artist.url | relative_url }}">
+            {% if current_artist.image %}<img src="{{ current_artist.image | relative_url }}" alt="">{% endif %}
+            <span><strong>{{ current_artist.title }}</strong><small>{{ current_artist.subtitle }}</small></span>
+          </a>
+        {% elsif former_artist %}
+          <div class="featured-artist featured-artist--former">
+            <span><strong>{{ former_artist.name }}</strong><small>{{ former_artist.role }}</small></span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

@@ -1,0 +1,19 @@
+---
+title: 'Johannes Ockeghem: Les Chansons'
+source: MusicWeb International (UK)
+review_date: November 1, 2020
+sort_date: '2020-11-01'
+author: Colin Clarke
+excerpt: The chansons of Johannes Ockeghem are gems. In an attempt to bring this music
+  to life, Cut Circle made the decision to bring the microphones up close, as if to
+  intensify the…
+---
+
+<p>The chansons of Johannes Ockeghem are gems. In an attempt to bring this music to life, Cut Circle made the decision to bring the microphones up close, as if to intensify the experience. It works, generally; this music might be distanced in time, but emotionally it is absolutely of the moment. You might want to prepare yourself for the initial explosion of sound in the Josquin <em>Nymphes des bois</em>, a lament on the death of Ockeghem and the first item (or I might have spoilt the intended shock …). In this way, the song begins as a <em>cri de coeur</em>, bare, raw, hurting, the tenor singing the Requiem chant and with a powerful ‘requiescat in pace’ from all at the end.</p>
+<p>Rightly, Cut Circle eschew vocal vibrato, while maintaining a full spectrum of expression from gritty realism to utmost tenderness.</p>
+<p>The link between Ockeghem and Josquin is strong. In his <em>Missa D’ung aultre amer</em>, very recently released on Gimell courtesy of the Tallis Scholars and Peter Phillips, Josquin takes the Ockeghem chanson as the very core of this work. It is interesting that the mass is based on such a boisterous song, and Cut Circle certainly seem to have a ball in the Ockeghem, especially in the open, almost vulgar sounds of the chanson’s close. Placing it next to the sadness-laden <em>Ma bouche rit</em> creates a strong contrast between the two.</p>
+<p>There is some splendid vocal bending of notes in the already chromatic <em>Qu’es mi vida</em>, an arrangement of a canción by Johannes Cornago and it is fascinating, too, to hear the sharp shifts of mood in the virelais: the sudden uplift in <em>Presque transi</em>, for example. Moods shift widely between chansons, also, such as in the bawdy <em>L’autre d’antan</em> (particularly raw here) set against the restrained beauty of the first section of <em>Quant de vous seul</em>. Perhaps the most remarkable writing is in <em>Tant fuz gentement resjouy</em>, which closes the first disc, with its sudden clearings of complex harmonies – but who could resist the purity of the upper voices in <em>Je n’ay dueil,</em> Ockeghem contrasting this with the earthier male voices?</p>
+<p>We have two settings of <em>Je n’ay duell</em>, the first restrained, the second decidedly extrovert (the booklet notes describe the second as ‘wailing’). In <em>Fors seulement contre/Fors seulement l’attente</em>, effectively we find two songs in one, as the song is bitextual; the result is complex and remarkable, even sensual.</p>
+<p>One has to admire the tuning of Cut Circle in the difficult arrangement Ockeghem made for two voices of a chanson by Johannes Bedyngham; sopranos Sonja DuToit Tengblard and Clare McNamara are beyond criticism and the music takes on a remarkably haunting quality. The three voices used in <em>Prenez sur moy,</em> Clare McNamara, Jonas Budris and Bradford Gleim, balance extraordinarily well.</p>
+<p>It is rather nice that the album ends where it began, with a lament from one composer to another, this time Ockeghem’s ‘déploration’ for Binchois (who died in 1460). Again, two texts are used (one Latin, one French). This, at 8:35 one of the longer offerings, is a remarkable piece, a sort of sound field of mourning.</p>
+<p>In November 2010, my colleague Robert Hugill took on the Brilliant Classics disc of <em>Missa de plus en plus</em> (<a href="http://www.musicweb-international.com/classrev/2010/Nov10/Ockeghem_94073.htm">review</a>) which includes a number of Ockeghem’s chansons, as here, one to a part. This new release is beautifully presented in hardback cover with extensive notes and illustrations.</p>

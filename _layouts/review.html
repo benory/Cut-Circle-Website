@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<article class="review-page">
+  <header class="page-header">
+    <div class="content-width">
+      <p class="eyebrow">Review</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.source %}<p class="page-subtitle">{{ page.source }}{% if page.review_date %} · {{ page.review_date }}{% endif %}</p>{% endif %}
+    </div>
+  </header>
+  {% assign source_image = page.source_image %}
+  {% if source_image %}
+  {% elsif page.source contains 'Diapason' %}{% assign source_image = '/assets/images/press-diapason-dor.jpg' %}
+  {% elsif page.source contains 'Fanfare' %}{% assign source_image = '/assets/images/press-fanfare.png' %}
+  {% elsif page.source contains 'Mittelbayerische' %}{% assign source_image = '/assets/images/press-mittelbayerische.png' %}
+  {% elsif page.source contains 'Rondo' %}{% assign source_image = '/assets/images/press-rondo.png' %}
+  {% elsif page.source contains 'BR Klassik' or page.source contains 'BR-KLASSIK' %}{% assign source_image = '/assets/images/press-br.svg' %}
+  {% elsif page.source contains 'All Music' %}{% assign source_image = '/assets/images/press-allmusic.png' %}
+  {% elsif page.source contains 'La Libre' %}{% assign source_image = '/assets/images/press-la-libre.svg' %}
+  {% elsif page.source contains 'Le soir' or page.source contains 'Le Soir' %}{% assign source_image = '/assets/images/press-le-soir.jpg' %}
+  {% endif %}
+
+  <div class="content-width review-layout">
+    <main class="review-detail">
+      <div class="review-detail__layout{% if source_image %} review-detail__layout--with-image{% endif %}">
+        {% if source_image %}
+          <a class="review-source-link" href="{{ source_image | relative_url }}" target="_blank" rel="noopener" aria-label="Open the {{ page.source }} clipping at full size">
+            <img class="review-source-image" src="{{ source_image | relative_url }}" alt="{{ page.source }} clipping" loading="lazy">
+          </a>
+        {% endif %}
+        <div class="review-detail__body">
+          <blockquote class="prose review-quotation">
+            {{ content }}
+          </blockquote>
+          <footer class="review-credit">
+            {% if page.author %}<p>— {{ page.author }}</p>{% endif %}
+            {% if page.source_url %}<a class="catalog-link" href="{{ page.source_url }}" target="_blank" rel="noopener">Read original review</a>{% endif %}
+          </footer>
+        </div>
+      </div>
+
+      <section class="related-reviews" aria-labelledby="related-reviews-heading">
+        <h2 id="related-reviews-heading">More reviews</h2>
+        <div class="related-reviews__grid">
+          {% assign review_entries = site.reviews | sort: 'sort_date' | reverse %}
+          {% assign review_count = 0 %}
+          {% for review in review_entries %}
+            {% if review.url != page.url and review_count < 3 %}
+              <a href="{{ review.url | relative_url }}"><small>{{ review.source }}</small><strong>{{ review.title }}</strong></a>
+              {% assign review_count = review_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+  </div>
+</article>

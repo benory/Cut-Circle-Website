@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<article class="catalog-item recording-page">
+  <header class="page-header">
+    <div class="content-width">
+      <p class="eyebrow">Recording</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+    </div>
+  </header>
+  <div class="content-width recording-layout">
+    <main class="recording-main">
+      <div class="item-detail recording-detail">
+        <aside class="item-detail__media">
+          {% if page.image %}<img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">{% endif %}
+          {% if page.released %}<p class="release-date">Released: {{ page.released }}</p>{% endif %}
+          {% if page.label %}<p>{{ page.label }}</p>{% endif %}
+          <div class="catalog-links">
+            {% if page.spotify %}<a class="catalog-link" href="{{ page.spotify }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
+            {% if page.apple_music %}<a class="catalog-link" href="{{ page.apple_music }}" target="_blank" rel="noopener">Apple Music</a>{% endif %}
+            {% if page.liner_notes %}<a class="catalog-link" href="{{ page.liner_notes }}" target="_blank" rel="noopener">Liner notes</a>{% endif %}
+            {% if page.watch %}<a class="catalog-link" href="{{ page.watch | relative_url }}">Watch film</a>{% endif %}
+          </div>
+        </aside>
+        <div class="prose item-detail__content">
+          {{ content }}
+        </div>
+      </div>
+
+      {% if page.album_embeds %}
+        <section class="recording-audio" aria-labelledby="recording-audio-heading">
+          <h2 id="recording-audio-heading">Listen</h2>
+          <div class="recording-audio__stack">
+            {% for embed in page.album_embeds %}
+              <iframe title="{{ embed.title }}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="{{ embed.url }}"></iframe>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% if page.video_embed %}
+        <section class="recording-film" aria-labelledby="recording-film-heading">
+          <h2 id="recording-film-heading">Watch</h2>
+          <div class="video-embed"><iframe src="{{ page.video_embed }}" title="{{ page.video_title | default: page.title }}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        </section>
+      {% endif %}
+
+      {% include featured-artists.html %}
+    </main>
+  </div>
+</article>

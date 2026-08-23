@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article class="video-page">
+  <header class="page-header">
+    <div class="content-width">
+      <p class="eyebrow">Video</p>
+      <h1>{{ page.title }}</h1>
+    </div>
+  </header>
+  <div class="content-width video-layout">
+    <main class="video-detail">
+      {% if page.vimeo_url %}
+        <div class="video-embed">
+          <iframe src="{{ page.vimeo_url }}" title="{{ page.title }}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {% assign video_content = content | strip %}
+      {% unless video_content == '' %}<div class="prose">{{ content }}</div>{% endunless %}
+
+      {% include featured-artists.html %}
+
+      <section class="more-videos" aria-labelledby="more-videos-heading">
+        <h2 id="more-videos-heading">More Videos</h2>
+        <div class="more-videos__grid">
+          {% assign video_entries = site.videos | sort: 'sort_date' | reverse %}
+          {% assign video_count = 0 %}
+          {% for video in video_entries %}
+            {% if video.url != page.url and video_count < 4 %}
+              <a href="{{ video.url | relative_url }}">
+                {% if video.image %}<img src="{{ video.image | relative_url }}" alt="" loading="lazy">{% endif %}
+                <strong>{{ video.title }}</strong>
+              </a>
+              {% assign video_count = video_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+  </div>
+</article>

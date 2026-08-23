@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<article class="event-page">
+  <header class="page-header">
+    <div class="content-width">
+      <p class="eyebrow">Event</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.event_date %}
+        <p class="page-subtitle"><time datetime="{{ page.sort_date }}">{{ page.event_date }}</time>{% if page.event_time %} · {{ page.event_time }}{% endif %}</p>
+      {% endif %}
+    </div>
+  </header>
+  {% assign event_content = content | strip %}
+  <div class="content-width event-layout">
+    <main class="event-main">
+      {% if page.image %}<img class="event-main__image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">{% endif %}
+      <div class="prose event-main__content">
+        {% if event_content == '' %}
+          <p>{{ page.excerpt }}</p>
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div>
+
+      {% if page.address %}
+        <section class="event-map" aria-labelledby="event-map-heading">
+          <h2 id="event-map-heading">Location</h2>
+          <iframe title="Map for {{ page.venue | default: page.title }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q={{ page.address | append: ', ' | append: page.venue | url_encode }}&amp;output=embed"></iframe>
+        </section>
+      {% endif %}
+
+      <section class="related-events" aria-labelledby="related-events-heading">
+        <h2 id="related-events-heading">More events</h2>
+        <div class="related-events__grid">
+          {% assign related_count = 0 %}
+          {% assign event_entries = site.events | sort: 'sort_date' | reverse %}
+          {% for event in event_entries %}
+            {% if event.url != page.url and related_count < 3 %}
+              <a href="{{ event.url | relative_url }}">
+                {% if event.image %}<img src="{{ event.image | relative_url }}" alt="" loading="lazy">{% endif %}
+                <span><small>{{ event.event_date }}</small><strong>{{ event.title }}</strong></span>
+              </a>
+              {% assign related_count = related_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+
+    <aside class="event-details" aria-label="Event details">
+      <h2>Details</h2>
+      {% if page.event_date %}<p><strong>Date</strong><br><time datetime="{{ page.sort_date }}">{{ page.event_date }}</time></p>{% endif %}
+      {% if page.event_time %}<p><strong>Time</strong><br>{{ page.event_time }}</p>{% endif %}
+      {% if page.venue %}<p><strong>Venue</strong><br>{{ page.venue }}</p>{% endif %}
+      {% if page.address %}<p><strong>Address</strong><br>{{ page.address }}</p>{% endif %}
+      {% assign event_timestamp = page.sort_date | date: '%s' | plus: 0 %}
+      {% assign event_end_timestamp = event_timestamp | plus: 86399 %}
+      {% assign current_timestamp = site.time | date: '%s' | plus: 0 %}
+      {% if page.event_url and event_end_timestamp >= current_timestamp %}<a class="catalog-link event-details__link" href="{{ page.event_url }}" target="_blank" rel="noopener">Event information / tickets</a>{% endif %}
+
+      <div class="event-share">
+        <h2>Share</h2>
+        <a href="mailto:?subject={{ page.title | url_encode }}&amp;body={{ page.url | absolute_url | url_encode }}">Email</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </aside>
+  </div>
+</article>
