@@ -953,6 +953,8 @@ h1, h2, h3 { font-weight: 400; }
   .home-features { margin-bottom: 32px; padding-inline: 0; }
   .feature-card h2 { font-size: 18px; }
   .site-footer__inner { width: calc(100% - 36px); flex-direction: column; justify-content: center; gap: 12px; padding-block: 22px; }
+  .site-footer .social-links { order: 1; }
+  .site-footer__credits { order: 2; }
   .archive-grid { grid-template-columns: 1fr; }
   .archive-grid--text { grid-template-columns: 1fr; }
   .archive-layout--rail .archive-grid, .archive-layout--rail .archive-grid--text { grid-template-columns: 1fr; }

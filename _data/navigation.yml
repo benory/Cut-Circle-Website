@@ -25,6 +25,8 @@
 - label: Events
   url: /events/
   children:
+    - label: Events
+      url: /events/
     - label: Community Feasting
       url: /community-feasting-project/
 - label: Scores
