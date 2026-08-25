@@ -7,20 +7,28 @@ hero_image: /assets/images/about-hero.jpg
 description: Learn about Cut Circle, its history, musical mission, name, and auditions.
 gallery:
   - image: /assets/images/about-gallery-hard-songs.jpg
+    full_image: /assets/images/about-gallery-full/hard-songs.jpg
     alt: Cut Circle rehearsing Hard Songs
   - image: /assets/images/about-gallery-maastricht-1.jpg
+    full_image: /assets/images/about-gallery-full/maastricht-1.jpg
     alt: Cut Circle singers performing in Maastricht
   - image: /assets/images/about-gallery-maastricht-2.jpg
+    full_image: /assets/images/about-gallery-full/maastricht-2.jpg
     alt: Cut Circle in concert in Maastricht
   - image: /assets/images/about-gallery-princeton.jpg
+    full_image: /assets/images/about-gallery-full/princeton.jpg
     alt: Cut Circle performing in Princeton
   - image: /assets/images/about-gallery-regensburg.png
+    full_image: /assets/images/about-gallery-full/regensburg.png
     alt: Cut Circle performing in Regensburg
   - image: /assets/images/about-gallery-session.jpg
+    full_image: /assets/images/about-gallery-full/session.jpg
     alt: Cut Circle in a recording session
   - image: /assets/images/about-gallery-maastricht-3.jpg
+    full_image: /assets/images/about-gallery-full/maastricht-3.jpg
     alt: Cut Circle tenors singing in Maastricht
   - image: /assets/images/about-gallery-maastricht-4.jpg
+    full_image: /assets/images/about-gallery-full/maastricht-4.jpg
     alt: Jesse Rodin directing Cut Circle
 ---
 

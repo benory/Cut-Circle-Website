@@ -266,6 +266,59 @@
     }
   }
 
+  const aboutLightbox = document.querySelector('[data-about-lightbox]');
+  const aboutLightboxImage = aboutLightbox?.querySelector('[data-about-lightbox-image]');
+  const aboutLightboxClose = aboutLightbox?.querySelector('[data-about-lightbox-close]');
+  const aboutGalleryImages = [...document.querySelectorAll('[data-about-gallery-image]')];
+
+  if (aboutLightbox && aboutLightboxImage && typeof aboutLightbox.showModal === 'function') {
+    let activeTrigger;
+    let currentImageIndex = 0;
+    let returnFocusOnClose = false;
+
+    const closeAboutLightbox = () => {
+      if (aboutLightbox.open) aboutLightbox.close();
+    };
+
+    const showAboutGalleryImage = (index) => {
+      currentImageIndex = (index + aboutGalleryImages.length) % aboutGalleryImages.length;
+      const trigger = aboutGalleryImages[currentImageIndex];
+      aboutLightboxImage.src = trigger.href;
+      aboutLightboxImage.alt = trigger.querySelector('img')?.alt || '';
+    };
+
+    aboutGalleryImages.forEach((trigger, index) => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        activeTrigger = trigger;
+        returnFocusOnClose = event.detail === 0;
+        showAboutGalleryImage(index);
+        aboutLightbox.showModal();
+      });
+    });
+
+    aboutLightboxClose?.addEventListener('click', closeAboutLightbox);
+    aboutLightbox.addEventListener('click', (event) => {
+      if (event.target === aboutLightbox) closeAboutLightbox();
+    });
+    aboutLightbox.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showAboutGalleryImage(currentImageIndex - 1);
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showAboutGalleryImage(currentImageIndex + 1);
+      }
+    });
+    aboutLightbox.addEventListener('close', () => {
+      aboutLightboxImage.removeAttribute('src');
+      if (returnFocusOnClose) activeTrigger?.focus();
+      activeTrigger = undefined;
+      returnFocusOnClose = false;
+    });
+  }
+
   const contactForm = document.querySelector('[data-contact-form]');
   if (contactForm) {
     contactForm.addEventListener('submit', (event) => {

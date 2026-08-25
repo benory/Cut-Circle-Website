@@ -13,9 +13,15 @@ layout: default
       {% if page.gallery %}
         <div class="about-gallery" aria-label="Cut Circle in performance and rehearsal">
           {% for photo in page.gallery %}
-            <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt }}" loading="lazy" width="300" height="300">
+            <a class="about-gallery__item" href="{{ photo.full_image | default: photo.image | relative_url }}" data-about-gallery-image aria-label="Enlarge: {{ photo.alt | escape }}">
+              <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt }}" loading="lazy" width="600" height="600">
+            </a>
           {% endfor %}
         </div>
+        <dialog class="about-lightbox" data-about-lightbox aria-label="Enlarged gallery image">
+          <button class="about-lightbox__close" type="button" data-about-lightbox-close aria-label="Close enlarged image">&times;</button>
+          <img data-about-lightbox-image alt="">
+        </dialog>
       {% endif %}
     </div>
   </div>
