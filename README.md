@@ -10,7 +10,7 @@ The ensemble’s latest release is the second disc in a cycle devoted to the com
 
 This repository contains the [Cut Circle website](https://cutcircle.org/), presenting the ensemble’s artists, recordings, videos, performances, reviews, auditions, and Community Feasting Project. It also connects visitors with scores from the [Josquin Research Project](https://www.josqu.in/repertoire/?texted=true).
 
-The website is built with [Jekyll](https://jekyllrb.com/). It uses Markdown and YAML front matter for content, Liquid templates for page rendering, and static CSS and JavaScript. Public URLs from the previous WordPress site are preserved where practical.
+The website is built with [Jekyll](https://jekyllrb.com/). It uses Markdown and YAML front matter for content, Liquid templates for page rendering, and static CSS and JavaScript.
 
 ## Project structure
 
@@ -24,7 +24,10 @@ The website is built with [Jekyll](https://jekyllrb.com/). It uses Markdown and 
 - `_layouts/` — page templates for each content type
 - `_includes/` — reusable interface components
 - `assets/` — images, audio, stylesheets, JavaScript, and fonts
-- `legacy/` — compatibility pages for older public URLs
 - `script/check_site.py` — checks generated pages for broken local references and basic structural issues
+- Top-level Markdown and HTML files — principal pages and collection archives
+- `search.json` — generated search-index template
+- `_config.yml` — Jekyll configuration, collection definitions, URL settings, and layout defaults
+- `Gemfile` and `Gemfile.lock` — Ruby dependency definitions
 
-Top-level Markdown files define the principal pages and collection archives. Collection URLs and defaults are configured in `_config.yml`.
+Generated and local-development directories such as `_site/`, `.jekyll-cache/`, and `vendor/` are not tracked.
