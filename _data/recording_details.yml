@@ -1,0 +1,336 @@
+josquin-i-motets-et-chansons:
+  clips:
+    - title: "Josquin des Prez, <em>Ave Maria…virgo serena</em>"
+      file: /assets/audio/josquin-ave-maria.mp3
+  sections:
+    - title: Motets
+      start: 1
+      tracks:
+        - title: "Ave Maria…virgo serena (à 4)"
+          duration: "4:10"
+        - title: "Virgo salutiferi / Ave Maria (à 5)"
+          duration: "6:11"
+        - title: "Ave verum corpus (à 2–3)"
+          duration: "3:48"
+        - title: "Miserere mei, deus (à 5)"
+          duration: "13:15"
+        - title: "Ut Phebi radiis / Ut re mi fa sol la (à 4)"
+          duration: "4:26"
+        - title: "Stabat mater / Comme femme desconfortée (à 5)"
+          duration: "6:18"
+        - title: "Pater noster / Ave Maria (à 6)"
+          duration: "6:35"
+    - title: Chansons
+      start: 8
+      tracks:
+        - title: "Une musque de Biscaye (à 4)"
+          duration: "3:55"
+        - title: "Si j’ay perdu mon amy (à 3)"
+          duration: "2:10"
+        - title: "Parfons regretz (à 5)"
+          duration: "2:26"
+        - title: "Faulte d’argent (à 5)"
+          duration: "2:10"
+        - title: "Baisiez moy (à 4)"
+          duration: "1:20"
+        - title: "En l’ombre d’ung buissonet, tout au long (à 3)"
+          duration: "1:17"
+        - title: "Petite camusette (à 6)"
+          duration: "1:20"
+        - title: "Scaramella (à 4)"
+          duration: "1:00"
+        - title: "Nimphes, nappées / Circumdederunt me (à 6)"
+          duration: "2:25"
+
+josquin-ii:
+  sections:
+    - title: "Missa L’ami Baudichon"
+      start: 1
+      tracks:
+        - title: Kyrie
+        - title: Gloria
+        - title: Credo
+        - title: Sanctus
+        - title: Agnus Dei
+        - title: "L’ami Baudichon"
+        - title: "Que vous ma dame / In pace"
+    - title: "Vultum tuum deprecabuntur"
+      start: 8
+      tracks:
+        - title: "I. Vultum tuum"
+        - title: "II. Sancta dei genitrix"
+        - title: "III. O intemerata virgo"
+        - title: "IV. O Maria"
+        - title: "V. Mente tota tibi supplicamus"
+        - title: "VI. Ora pro nobis"
+        - title: "VII. Christe fili, dei"
+    - title: "Qui velatus facie fuisti"
+      start: 15
+      tracks:
+        - title: "I. Qui velatus"
+        - title: "II. Hora qui ductis tercia"
+        - title: "III. In flagellis"
+        - title: "IV. In amara"
+        - title: "V. Qui jacuisti mortuus"
+        - title: "VI. Christum ducum"
+
+messes-anonymes:
+  clips:
+    - title: "Anonymous, <em>Missa Gross senen</em>, Credo"
+      file: /assets/audio/missa-gross-senen-credo.mp3
+  sections:
+    - title: "Missa Gross senen"
+      start: 1
+      tracks:
+        - title: Kyrie
+          duration: "5:09"
+        - title: Gloria
+          duration: "7:04"
+        - title: Credo
+          duration: "9:30"
+        - title: Sanctus
+          duration: "9:00"
+        - title: Agnus Dei
+          duration: "4:36"
+    - title: "Missa L’ardant desir"
+      start: 6
+      tracks:
+        - title: Kyrie
+          duration: "3:32"
+        - title: Gloria
+          duration: "7:46"
+        - title: Credo
+          duration: "8:56"
+        - title: Sanctus
+          duration: "8:17"
+        - title: Agnus Dei
+          duration: "5:50"
+
+johannes-ockeghem-the-songs:
+  clips:
+    - title: "Johannes Ockeghem, <em>Tant fuz gentement resjouy</em>"
+      file: /assets/audio/ockeghem-tant-fuz.mp3
+  discs:
+    - title: CD 1
+      sections:
+        - start: 1
+          tracks:
+            - title: "Nymphes des bois / Requiem (à 5) — Josquin des Prez"
+              duration: "4:24"
+            - title: "Ma maistresse"
+              duration: "6:40"
+            - title: "Presque transi"
+              duration: "6:32"
+            - title: "L’autre d’antan"
+              duration: "2:48"
+            - title: "Ma bouche rit"
+              duration: "6:33"
+            - title: "¿Qu’es mi vida, preguntays? (à 4)"
+              duration: "4:16"
+            - title: "Baisies moy"
+              duration: "6:55"
+            - title: "D’ung aultre amer"
+              duration: "4:38"
+            - title: "Quant de vous seul"
+              duration: "5:34"
+            - title: "Je n’ay dueil (à 3)"
+              duration: "5:22"
+            - title: "Les desléaulx"
+              duration: "4:39"
+            - title: "Tant fuz gentement resjouy"
+              duration: "4:47"
+    - title: CD 2
+      sections:
+        - start: 1
+          tracks:
+            - title: "S’elle m’amera / Petite camusette (à 4)"
+              duration: "3:58"
+            - title: "Je n’ay dueil (à 4)"
+              duration: "6:10"
+            - title: "Aultre Venus"
+              duration: "4:33"
+            - title: "Fors seulement l’attente"
+              duration: "7:40"
+            - title: "Fors seullement contre / Fors seulement l’attente"
+              duration: "7:45"
+            - title: "O rosa bella (à 2)"
+              duration: "3:47"
+            - title: "La despourveue"
+              duration: "6:40"
+            - title: "Se vostre cuer"
+              duration: "5:29"
+            - title: "Prenez sur moy"
+              duration: "6:17"
+            - title: "Ung aultre l’a"
+              duration: "4:51"
+            - title: "Il ne m’en chault"
+              duration: "4:33"
+            - title: "Mort, tu as navré / Miserere (à 4)"
+              duration: "8:35"
+
+guillaume-du-fay-the-tenor-masses-les-messes-a-teneur:
+  discs:
+    - title: CD 1
+      sections:
+        - start: 1
+          tracks:
+            - title: "Se la face ay pale — Guillaume Du Fay"
+              duration: "2:53"
+        - title: "Missa Se la face ay pale"
+          start: 2
+          tracks:
+            - title: Kyrie
+              duration: "3:09"
+            - title: Gloria
+              duration: "7:57"
+            - title: Credo
+              duration: "7:41"
+            - title: Sanctus
+              duration: "5:43"
+            - title: Agnus Dei
+              duration: "4:11"
+        - title: "Missa L’homme armé"
+          start: 7
+          tracks:
+            - title: Kyrie
+              duration: "3:47"
+            - title: Gloria
+              duration: "7:17"
+            - title: Credo
+              duration: "10:58"
+            - title: Sanctus
+              duration: "8:04"
+            - title: Agnus Dei
+              duration: "5:38"
+    - title: CD 2
+      sections:
+        - title: "Missa Ecce ancilla Domini / Beata es Maria"
+          start: 1
+          tracks:
+            - title: Kyrie
+              duration: "5:12"
+            - title: Gloria
+              duration: "4:57"
+            - title: Credo
+              duration: "8:10"
+            - title: Sanctus
+              duration: "5:55"
+            - title: Agnus Dei
+              duration: "3:58"
+        - start: 6
+          tracks:
+            - title: "Ave regina celorum — anonymous plainchant"
+              duration: "1:47"
+            - title: "Ave regina celorum III — Guillaume Du Fay"
+              duration: "7:13"
+        - title: "Missa Ave regina celorum"
+          start: 8
+          tracks:
+            - title: Kyrie
+              duration: "5:40"
+            - title: Gloria
+              duration: "6:22"
+            - title: Credo
+              duration: "8:57"
+            - title: Sanctus
+              duration: "6:47"
+            - title: Agnus Dei
+              duration: "5:09"
+
+de-orto-and-josquin-music-in-the-sistine-chapel-around-1490:
+  clips:
+    - title: "Josquin des Prez, <em>Missa La sol fa re mi</em>, Crucifixus"
+      file: /assets/audio/listen-josquin-crucifixus.mp3
+    - title: "Gaspar van Weerbeke, <em>Dulcis amica Dei / Da pacem</em>"
+      file: /assets/audio/listen-gaspar-dulcis-amica.mp3
+    - title: "Gaspar van Weerbeke, <em>Ave regina celorum</em>"
+      file: /assets/audio/listen-gaspar-ave-regina.mp3
+    - title: "Marbrianus de Orto, <em>Lucis creator omnium</em>"
+      file: /assets/audio/listen-de-orto-lucis.mp3
+  discs:
+    - title: CD 1
+      sections:
+        - start: 1
+          tracks:
+            - title: "Nardi Maria pistici — Josquin des Prez"
+              duration: "1:51"
+            - title: "Missa La sol fa re mi: Crucifixus — Josquin des Prez"
+              duration: "4:46"
+            - title: "Missa La sol fa re mi: Agnus Dei — Josquin des Prez"
+              duration: "4:54"
+            - title: "Missa Fortuna desperata: Gloria — Josquin des Prez"
+              duration: "6:08"
+            - title: "Missa Fortuna desperata: Sanctus — Josquin des Prez"
+              duration: "2:19"
+            - title: "Missa Fortuna desperata: Agnus Dei I — Josquin des Prez"
+              duration: "2:16"
+            - title: "Dulcis amica Dei / Da pacem — Gaspar van Weerbeke"
+              duration: "8:05"
+            - title: "Ave regina celorum — Gaspar van Weerbeke"
+              duration: "6:44"
+            - title: "Missa Princesse d’amourettes: Agnus Dei — Gaspar van Weerbeke"
+              duration: "6:12"
+            - title: "Credo — anonymous"
+              duration: "8:45"
+            - title: "Lucis creator omnium — Marbrianus de Orto"
+              duration: "4:18"
+            - title: "Missa Ad fugam: Gloria — Marbrianus de Orto"
+              duration: "5:16"
+            - title: "Domine non secundum peccata — Bertrandus Vaqueras"
+              duration: "6:04"
+            - title: "Domine non secundum peccata — Josquin des Prez"
+              duration: "7:09"
+    - title: CD 2
+      sections:
+        - start: 1
+          tracks:
+            - title: "Il sera par vous / L’homme armé — Robert Morton"
+              duration: "2:12"
+            - title: "L’homme armé — anonymous"
+              duration: "0:37"
+            - title: "Missa L’homme armé: Kyrie — Marbrianus de Orto"
+              duration: "4:02"
+            - title: "Missa L’homme armé: Gloria — Marbrianus de Orto"
+              duration: "5:52"
+            - title: "Missa L’homme armé: Credo — Marbrianus de Orto"
+              duration: "8:09"
+            - title: "Missa L’homme armé: Sanctus — Marbrianus de Orto"
+              duration: "6:48"
+            - title: "Missa L’homme armé: Agnus Dei — Marbrianus de Orto"
+              duration: "6:55"
+            - title: "Ave mater gratie — Marbrianus de Orto"
+              duration: "6:17"
+            - title: "Factum est silentium — plainchant for St Michael"
+              duration: "1:37"
+            - title: "Missa L’homme armé super voces musicales: Kyrie — Josquin des Prez"
+              duration: "3:56"
+            - title: "Missa L’homme armé super voces musicales: Gloria — Josquin des Prez"
+              duration: "6:03"
+            - title: "Missa L’homme armé super voces musicales: Credo — Josquin des Prez"
+              duration: "7:15"
+            - title: "Missa L’homme armé super voces musicales: Sanctus — Josquin des Prez"
+              duration: "8:07"
+            - title: "Missa L’homme armé super voces musicales: Agnus Dei — Josquin des Prez"
+              duration: "7:07"
+
+sounds-of-renaissance-florence:
+  track_heading: Programme
+  clips:
+    - title: "<em>Canto dei sarti</em> — Song of the Tailors"
+      file: /assets/audio/song-of-the-tailors.mp3
+  sections:
+    - start: 1
+      tracks:
+        - title: "Aspiciens a longe — Matins responsory"
+        - title: "Conditor alme siderum — Vespers hymn and setting by Guillaume Du Fay"
+        - title: "Jesù, Jesù, Jesù — lauda"
+        - title: "Visin, visin, visin — carnival song"
+        - title: "Tria sunt munera — Vespers antiphon and psalm"
+        - title: "Miserere mei, deus — Josquin des Prez"
+        - title: "Ben venga maggio / Ecco’l Messia / Che fai qui core — May Day song and associated laude"
+        - title: "Da pacem domine — Lauds antiphon"
+        - title: "Alla battaglia — Heinrich Isaac"
+        - title: "Hodie nobis — Matins responsory"
+        - title: "O admirabile commercium — Lauds antiphons and settings by Josquin"
+        - title: "Canto dei sarti — Song of the Tailors"
+        - title: "Scaramella va alla guerra — Josquin des Prez"

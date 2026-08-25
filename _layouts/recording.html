@@ -1,41 +1,112 @@
 ---
 layout: default
 ---
+{% assign recording_details = site.data.recording_details[page.slug] %}
+{% assign recording_excerpts = site.data.recording_excerpts[page.slug] %}
 <article class="catalog-item recording-page">
-  <header class="page-header">
-    <div class="content-width">
-      <p class="eyebrow">Recording</p>
-      <h1>{{ page.title }}</h1>
-      {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
-    </div>
-  </header>
   <div class="content-width recording-layout">
-    <main class="recording-main">
-      <div class="item-detail recording-detail">
-        <aside class="item-detail__media">
-          {% if page.image %}<img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">{% endif %}
-          {% if page.released %}<p class="release-date">Released: {{ page.released }}</p>{% endif %}
-          {% if page.label %}<p>{{ page.label }}</p>{% endif %}
-          <div class="catalog-links">
-            {% if page.spotify %}<a class="catalog-link" href="{{ page.spotify }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
-            {% if page.apple_music %}<a class="catalog-link" href="{{ page.apple_music }}" target="_blank" rel="noopener">Apple Music</a>{% endif %}
-            {% if page.liner_notes %}<a class="catalog-link" href="{{ page.liner_notes }}" target="_blank" rel="noopener">Liner notes</a>{% endif %}
-            {% if page.watch %}<a class="catalog-link" href="{{ page.watch | relative_url }}">Watch film</a>{% endif %}
+    <div class="recording-detail">
+      <aside class="recording-sidebar">
+        {% if page.image %}
+          <img class="recording-cover" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+        {% endif %}
+        {% if page.liner_notes %}
+          <div class="recording-liner-link">
+            <a class="catalog-link" href="{{ page.liner_notes | relative_url }}" target="_blank" rel="noopener">Liner notes</a>
           </div>
-        </aside>
-        <div class="prose item-detail__content">
+        {% endif %}
+        <div class="recording-meta">
+          {% if page.released %}<p><strong>Released:</strong> {{ page.released }}</p>{% endif %}
+        </div>
+        {% if page.label %}
+          <div class="recording-label-block">
+            <span class="recording-sidebar-rule" aria-hidden="true"></span>
+            {% if page.purchase %}
+              <a class="recording-label-button" href="{{ page.purchase }}" target="_blank" rel="noopener">{{ page.label }}</a>
+            {% else %}
+              <span class="recording-label-button">{{ page.label }}</span>
+            {% endif %}
+            <span class="recording-sidebar-rule" aria-hidden="true"></span>
+          </div>
+        {% endif %}
+        <div class="catalog-links recording-catalog-links">
+          {% if page.spotify %}<a class="catalog-link" href="{{ page.spotify }}" target="_blank" rel="noopener"><span class="catalog-link__icon catalog-link__icon--spotify" aria-hidden="true"></span><span>Spotify</span></a>{% endif %}
+          {% if page.apple_music %}<a class="catalog-link" href="{{ page.apple_music }}" target="_blank" rel="noopener"><span class="catalog-link__icon catalog-link__icon--apple-music" aria-hidden="true"></span><span>Apple Music</span></a>{% endif %}
+          {% if page.watch %}<a class="catalog-link" href="{{ page.watch | relative_url }}">Watch film</a>{% endif %}
+        </div>
+      </aside>
+
+      <main class="recording-main">
+        <header class="recording-heading">
+          <p class="eyebrow">Recording</p>
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+        </header>
+        <div class="prose recording-description">
           {{ content }}
         </div>
-      </div>
 
-      {% if page.album_embeds %}
-        <section class="recording-audio" aria-labelledby="recording-audio-heading">
-          <h2 id="recording-audio-heading">Listen</h2>
-          <div class="recording-audio__stack">
-            {% for embed in page.album_embeds %}
-              <iframe title="{{ embed.title }}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="{{ embed.url }}"></iframe>
-            {% endfor %}
-          </div>
+      {% if recording_details.sections or recording_details.discs %}
+        <section class="recording-tracks" aria-labelledby="recording-tracks-heading" data-recording-playlist>
+          <h2 id="recording-tracks-heading">{{ recording_details.track_heading | default: 'Track list' }}</h2>
+          {% assign track_index = 0 %}
+          {% if recording_details.discs %}
+            <div class="track-list-grid track-list-grid--discs">
+              {% for disc in recording_details.discs %}
+                <div class="track-disc">
+                  <h3>{{ disc.title }}</h3>
+                  {% for section in disc.sections %}
+                    <div class="track-list__section">
+                      {% if section.title %}<h4>{{ section.title }}</h4>{% endif %}
+                      <ol>
+                        {% assign section_start = section.start | default: 1 %}
+                        {% for track in section.tracks %}
+                          {% assign track_number = forloop.index0 | plus: section_start %}
+                          {% assign excerpt = recording_excerpts[track_index] %}
+                          {% include recording-track.html track=track excerpt=excerpt number=track_number %}
+                          {% assign track_index = track_index | plus: 1 %}
+                        {% endfor %}
+                      </ol>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="track-list-grid">
+              {% for section in recording_details.sections %}
+                <div class="track-list__section">
+                  {% if section.title %}<h3>{{ section.title }}</h3>{% endif %}
+                  <ol>
+                    {% assign section_start = section.start | default: 1 %}
+                    {% for track in section.tracks %}
+                      {% assign track_number = forloop.index0 | plus: section_start %}
+                      {% assign excerpt = recording_excerpts[track_index] %}
+                      {% include recording-track.html track=track excerpt=excerpt number=track_number %}
+                      {% assign track_index = track_index | plus: 1 %}
+                    {% endfor %}
+                  </ol>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if recording_excerpts %}
+            <div class="recording-playback" data-recording-playback hidden>
+              <p class="recording-playback__title" data-recording-title aria-live="polite">Select a track</p>
+              <div class="recording-playback__controls">
+                <button type="button" data-recording-previous aria-label="Previous excerpt">Previous</button>
+                <button class="recording-playback__toggle" type="button" data-recording-toggle aria-label="Play selected excerpt">
+                  <svg class="recording-playback__play-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 3 11 7-11 7Z"/></svg>
+                  <svg class="recording-playback__pause-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h4v14H5zm6 0h4v14h-4z"/></svg>
+                </button>
+                <button type="button" data-recording-next aria-label="Next excerpt">Next</button>
+                <time data-recording-current datetime="PT0S">00:00</time>
+                <input type="range" min="0" max="100" value="0" step="0.1" data-recording-progress aria-label="Excerpt position">
+                <time data-recording-duration datetime="PT0S">00:00</time>
+              </div>
+              <audio preload="none"></audio>
+            </div>
+          {% endif %}
         </section>
       {% endif %}
 
@@ -45,8 +116,8 @@ layout: default
           <div class="video-embed"><iframe src="{{ page.video_embed }}" title="{{ page.video_title | default: page.title }}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
         </section>
       {% endif %}
-
-      {% include featured-artists.html %}
-    </main>
+      </main>
+    </div>
+    {% include featured-artists.html %}
   </div>
 </article>

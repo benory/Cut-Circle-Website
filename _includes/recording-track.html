@@ -1,0 +1,13 @@
+<li class="recording-track{% if include.excerpt.file %} recording-track--playable{% endif %}">
+  <span class="recording-track__number">{{ include.number }}</span>
+  {% if include.excerpt.file %}
+    <button class="recording-track__play" type="button" data-play-excerpt data-src="{{ include.excerpt.file | relative_url }}" data-title="{{ include.track.title | escape }}" aria-label="Play excerpt from {{ include.track.title | strip_html | escape }}">
+      <svg class="recording-track__play-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 3 11 7-11 7Z"/></svg>
+      <svg class="recording-track__pause-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h4v14H5zm6 0h4v14h-4z"/></svg>
+    </button>
+  {% else %}
+    <span class="recording-track__play-placeholder" aria-hidden="true"></span>
+  {% endif %}
+  <span class="recording-track__title">{{ include.track.title }}</span>
+  {% if include.track.duration %}<span class="recording-track__duration">{{ include.track.duration }}</span>{% endif %}
+</li>

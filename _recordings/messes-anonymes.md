@@ -5,14 +5,12 @@ image: /assets/images/recording-messes-anonymes.jpg
 image_alt: Messes Anonymes album cover
 released: October 2021
 label: Musique en Wallonie
+purchase: https://www.musiwall.uliege.be/product/messes-anonymes/
 spotify: https://open.spotify.com/album/5ycfccheBpB9gsMEhmiPaj
 apple_music: https://music.apple.com/us/album/messes-anonymes-missa-gross-senen-missa-lardant-desir/1582848477
 liner_notes: /assets/documents/LIVRET-Messes-anonymes.pdf
 order: 3
 excerpt: Two riveting, technically ambitious, and never-before-recorded fifteenth-century masses.
-album_embeds:
-  - title: Messes Anonymes
-    url: "https://open.spotify.com/embed/album/5ycfccheBpB9gsMEhmiPaj?utm_source=generator&theme=0"
 video_embed: "https://player.vimeo.com/video/441482865?title=0&byline=0&portrait=0&dnt=1"
 video_title: Messes Anonymes
 featured_artists:

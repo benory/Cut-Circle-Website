@@ -5,14 +5,12 @@ image: /assets/images/recording-ockeghem-songs.jpg
 image_alt: Johannes Ockeghem The Songs album cover
 released: September 2020 · double album
 label: Musique en Wallonie
+purchase: https://www.musiwall.uliege.be/product/johannes-ockeghem/
 spotify: https://open.spotify.com/album/42xAGxfGYktHNZPCz85Z1O
 apple_music: https://music.apple.com/us/album/johannes-ockeghem-les-chansons/1572126701
 liner_notes: /assets/documents/LIVRET-Johannes-Ockeghem-Les-chansons.pdf
 order: 5
 excerpt: Intimacy, intensity, and passion in Ockeghem’s roughly two-dozen songs.
-album_embeds:
-  - title: Johannes Ockeghem — The Songs
-    url: "https://open.spotify.com/embed/album/42xAGxfGYktHNZPCz85Z1O?utm_source=generator&theme=0"
 video_embed: "https://player.vimeo.com/video/441488684?title=0&byline=0&portrait=0&dnt=1"
 video_title: Johannes Ockeghem — The Songs
 featured_artists:

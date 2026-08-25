@@ -3,6 +3,7 @@ title: Auditions
 body_class: auditions-page
 permalink: /about/auditions/
 layout: learn-page
+hide_eyebrow: true
 hero_image: /assets/images/about-hero.jpg
 hero_position: center
 ---

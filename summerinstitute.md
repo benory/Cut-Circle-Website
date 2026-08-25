@@ -9,7 +9,7 @@ hero_position: center 46%
 ---
 
 <div class="program-lead">
-  <p class="program-date">UC Berkeley · 13–17 June 2026</p>
+  <p class="program-date">UC Berkeley | 13–17 June 2026</p>
   <p>Five days on Berkeley’s campus, hosted by Cut Circle and faculty from Berkeley, Princeton, and Stanford.</p>
   <div class="program-actions">
     <a class="button" href="{{ '/assets/documents/josquamp-brochure-2026.pdf' | relative_url }}">Course brochure</a>

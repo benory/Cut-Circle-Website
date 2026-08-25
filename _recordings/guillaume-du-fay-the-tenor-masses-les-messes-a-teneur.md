@@ -5,12 +5,13 @@ image: /assets/images/recording-du-fay.jpg
 image_alt: Guillaume Du Fay The Tenor Masses album cover
 released: March 2016 · double album
 label: Musique en Wallonie
+purchase: https://www.musiwall.uliege.be/product/guillaume-du-fay/
 spotify: https://open.spotify.com/album/1AzM0s0XK2O5dbOgsE8a8o
 apple_music: https://music.apple.com/us/album/les-messes-%C3%A0-teneur/1107725524
 liner_notes: /assets/documents/LIVRET-Guillaume-Du-Fay-Les-messes-a-teneur.pdf
 order: 6
 excerpt: A landmark recording of Du Fay’s four late masses.
-album_embeds:
+full_album_embeds:
   - title: Guillaume Du Fay — The Tenor Masses, disc one
     url: "https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F205569905&color=%23e9717d&show_artwork=true"
   - title: Guillaume Du Fay — The Tenor Masses, disc two

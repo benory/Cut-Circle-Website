@@ -4,14 +4,12 @@ image: /assets/images/recording-josquin-i.jpg
 image_alt: JOSQUIN I Motets and Chansons album cover
 released: November 2023
 label: Musique en Wallonie
+purchase: https://www.musiwall.uliege.be/product/josquin/
 spotify: https://open.spotify.com/album/20IZJyVISMToGWfQSaYonJ
 apple_music: https://music.apple.com/us/album/josquin-i-motets-chansons/1707168430
 liner_notes: /assets/documents/LIVRET-JOSQUIN-I.-Motets-chansons.pdf
 order: 2
 excerpt: Fresh interpretations of Josquin classics and lesser-known works that reveal his brilliance, versatility, and power.
-album_embeds:
-  - title: JOSQUIN I — Motets and Chansons
-    url: "https://open.spotify.com/embed/album/20IZJyVISMToGWfQSaYonJ?utm_source=generator&theme=0"
 featured_artists:
   - jonas-budris
   - corrine-byrne
