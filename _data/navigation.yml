@@ -33,6 +33,6 @@
   url: https://www.josqu.in/repertoire/?texted=true
   external: true
 - label: Subscribe
-  url: mailto:info@cutcircle.org?subject=Subscribe%20me%20to%20Cut%20Circle%20news
-  external: true
+  url: "#subscribe"
+  external: false
   new_window: false

@@ -1,0 +1,52 @@
+<dialog id="subscribe-modal" class="subscribe-modal" aria-labelledby="subscribe-title" aria-describedby="subscribe-intro">
+  <div class="subscribe-modal__panel">
+    <header class="subscribe-modal__header">
+      <h2 id="subscribe-title">Subscribe to Cut Circle</h2>
+      <button class="subscribe-modal__close" type="button" data-subscribe-close aria-label="Close subscription form">&times;</button>
+    </header>
+
+    <form class="subscribe-form" action="{{ site.forms.worker_url | escape }}" method="post" data-protected-form novalidate>
+      <input type="hidden" name="category" value="Subscribe">
+      <input type="hidden" name="source" value="">
+      <input type="hidden" name="user_agent" value="">
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="subscribe-website">Leave this field empty</label>
+        <input id="subscribe-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p id="subscribe-intro" class="subscribe-form__intro">News about concerts, recordings, and Cut Circle projects.<br>Fields marked * are required.</p>
+
+      <div class="subscribe-form__names">
+        <div class="subscribe-form__field">
+          <label for="subscribe-first-name">First name <span aria-hidden="true">*</span></label>
+          <input id="subscribe-first-name" name="first_name" type="text" autocomplete="given-name" maxlength="80" required>
+        </div>
+        <div class="subscribe-form__field">
+          <label for="subscribe-last-name">Last name <span aria-hidden="true">*</span></label>
+          <input id="subscribe-last-name" name="last_name" type="text" autocomplete="family-name" maxlength="80" required>
+        </div>
+      </div>
+
+      <div class="subscribe-form__field">
+        <label for="subscribe-email">Email address <span aria-hidden="true">*</span></label>
+        <input id="subscribe-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      </div>
+
+      {% if site.forms.turnstile_sitekey != empty %}
+      <div class="subscribe-form__field protected-form__turnstile">
+        <div data-turnstile-widget data-sitekey="{{ site.forms.turnstile_sitekey | escape }}" data-action="subscribe"></div>
+      </div>
+      {% else %}
+      <p class="protected-form__config-note" role="note">Verification will appear after the form is configured.</p>
+      {% endif %}
+
+      <button class="subscribe-form__submit" type="submit" data-submit-label="Subscribe">Subscribe</button>
+      <div class="protected-form__status" data-form-status aria-live="polite"></div>
+    </form>
+
+    <div id="subscribe-success" class="subscribe-form__success" data-form-success tabindex="-1" hidden>
+      <p class="subscribe-form__success-title">Thank you for subscribing.</p>
+      <p>We’ll be in touch with Cut Circle news.</p>
+    </div>
+  </div>
+</dialog>

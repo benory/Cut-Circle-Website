@@ -62,10 +62,10 @@ body {
 
 #content { flex: 1 0 auto; }
 
-body.nav-open { overflow: hidden; }
+body.nav-open, body.subscribe-modal-open { overflow: hidden; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 h1, h2, h3 { font-weight: 400; }
 
 .content-width {
@@ -192,6 +192,7 @@ h1, h2, h3 { font-weight: 400; }
 }
 .donate-button { min-width: 110px; padding: 14px 24px; }
 .header-subscribe { min-width: 110px; padding: 14px 20px; color: #202020; background: var(--yellow); }
+.header-subscribe { cursor: pointer; }
 .button { padding: 16px 43px; }
 .donate-button:hover, .button:hover { background: #f07d88; transform: translateY(-1px); }
 .header-subscribe:hover { background: #fff16a; transform: translateY(-1px); }
@@ -641,7 +642,9 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
 .about-rail__nav a:hover, .about-rail__nav a:focus-visible, .about-rail__nav .is-current { color: #36a9cf; }
 .about-subscribe p { margin: 0 0 13px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .about-subscribe__button {
+  width: 100%;
   display: block;
+  border: 0;
   padding: 10px 8px;
   color: #202020;
   background: var(--yellow);
@@ -649,6 +652,7 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   line-height: 1;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
 .about-connect .social-links { gap: 8px; }
 .about-connect .social-links a { width: 25px; height: 25px; background: var(--yellow); }
@@ -846,6 +850,111 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
 .contact-form button:hover, .contact-form button:focus-visible { background: #f07d88; }
 .contact-form__note { max-width: 760px; margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .contact-form__note a { color: var(--ink); }
+.contact-form__success { color: var(--ink); }
+.contact-form__success h2 { margin: 0 0 8px; font: 400 38px/1.1 "Adobe Jenson", Georgia, serif; }
+.contact-form__success p { margin: 0; }
+
+.form-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+.protected-form__turnstile { min-height: 65px; }
+.protected-form__config-note { margin: 10px 0; color: var(--muted); font-size: 12px; }
+.protected-form__status { min-height: 24px; margin-top: 8px; font-size: 13px; line-height: 1.4; }
+.protected-form__status:empty { min-height: 0; margin-top: 0; }
+.protected-form__status--error { color: #ff9aa7; }
+.protected-form__status--success { color: #7fd49f; }
+
+.subscribe-modal {
+  width: min(460px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100vh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  border-radius: 4px;
+  color: #242424;
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .5);
+}
+.subscribe-modal::backdrop { background: rgba(0, 0, 0, .72); }
+.subscribe-modal__panel { min-height: 100%; }
+.subscribe-modal__header {
+  position: relative;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 56px 16px 26px;
+  color: #202020;
+  background: var(--yellow);
+}
+.subscribe-modal__header h2 { margin: 0; font: 400 31px/1 "Adobe Jenson", Georgia, serif; }
+.subscribe-modal__close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 0;
+  color: #222;
+  background: transparent;
+  font: 400 32px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+.subscribe-modal__close:hover { color: #8d1830; background: transparent; }
+.subscribe-modal__close:focus-visible {
+  color: #8d1830;
+  background: transparent;
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+.subscribe-form { padding: 22px 26px 24px; }
+.subscribe-form__intro { margin: 0 0 18px; color: #555; font-size: 13px; line-height: 1.5; }
+.subscribe-form__names { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.subscribe-form__field { margin-bottom: 13px; }
+.subscribe-form__field label { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 700; }
+.subscribe-form__field input {
+  width: 100%;
+  height: 44px;
+  padding: 9px 11px;
+  border: 1px solid #aaa;
+  border-radius: 0;
+  color: #222;
+  background: #fff;
+}
+.subscribe-form__field input:focus, .contact-form input:focus, .contact-form textarea:focus {
+  border-color: #555;
+  outline: 2px solid rgba(252, 226, 46, .75);
+  outline-offset: 1px;
+}
+.subscribe-form__submit {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 2px;
+  color: #202020;
+  background: var(--yellow);
+  font-weight: 700;
+  cursor: pointer;
+}
+.subscribe-form__submit:hover, .subscribe-form__submit:focus-visible { background: #fff16a; }
+.subscribe-form__submit[disabled], .contact-form button[disabled] { cursor: wait; opacity: .65; }
+.subscribe-form .protected-form__config-note { color: #666; }
+.subscribe-form .protected-form__status--error { color: #a31324; }
+.subscribe-form .protected-form__status--success { color: #176f3c; }
+.subscribe-form__success { padding: 34px 28px 38px; text-align: center; }
+.subscribe-form__success-title { margin: 0 0 8px; font: 400 30px/1.1 "Adobe Jenson", Georgia, serif; }
+.subscribe-form__success p:last-child { margin: 0; color: #555; font-size: 14px; }
 
 .support-page { padding-bottom: 74px; background: #222; }
 .support-hero {
@@ -1179,6 +1288,12 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   .contact-page { min-height: 560px; padding: 28px 18px 48px; }
   .contact-form { width: 100%; }
   .contact-form__note { font-size: 12px; }
+  .subscribe-modal { width: calc(100% - 24px); max-height: calc(100vh - 24px); }
+  .subscribe-modal__header { min-height: 70px; padding: 15px 48px 14px 20px; }
+  .subscribe-modal__close { top: 7px; right: 7px; }
+  .subscribe-modal__header h2 { font-size: 27px; }
+  .subscribe-form { padding: 20px 20px 22px; }
+  .subscribe-form__names { grid-template-columns: 1fr; gap: 0; }
   .support-page { padding-bottom: 55px; }
   .support-hero { min-height: 240px; }
   .support-donation { width: calc(100% - 28px); margin-top: -85px; }

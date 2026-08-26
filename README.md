@@ -24,6 +24,7 @@ The website is built with [Jekyll](https://jekyllrb.com/). It uses Markdown and 
 - `_layouts/` — page templates for each content type
 - `_includes/` — reusable interface components
 - `assets/` — images, audio, stylesheets, JavaScript, and fonts
+- `cloudflare/` — secure Contact and Subscribe submission Worker, Google Form setup notes, and notification script
 - `script/check_site.py` — checks generated pages for broken local references and basic structural issues
 - Top-level Markdown and HTML files — principal pages and collection archives
 - `search.json` — generated search-index template

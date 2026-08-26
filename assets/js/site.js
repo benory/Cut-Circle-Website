@@ -319,17 +319,166 @@
     });
   }
 
-  const contactForm = document.querySelector('[data-contact-form]');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
+  const turnstileWidgets = new WeakMap();
+
+  const renderTurnstileWidget = (container) => {
+    if (!container || turnstileWidgets.has(container) || !window.turnstile) return;
+
+    try {
+      const widgetId = window.turnstile.render(container, {
+        sitekey: container.dataset.sitekey,
+        action: container.dataset.action,
+        theme: 'light'
+      });
+      turnstileWidgets.set(container, widgetId);
+      delete container.dataset.turnstileFailed;
+    } catch (error) {
+      container.dataset.turnstileFailed = 'true';
+      console.error('Verification could not be rendered:', error);
+    }
+  };
+
+  const renderVisibleTurnstileWidgets = () => {
+    document.querySelectorAll('[data-turnstile-widget]').forEach((container) => {
+      const dialog = container.closest('dialog');
+      if (!dialog || dialog.open) renderTurnstileWidget(container);
+    });
+  };
+
+  const resetTurnstileWidget = (container) => {
+    if (!container || !window.turnstile || !turnstileWidgets.has(container)) return;
+    window.turnstile.reset(turnstileWidgets.get(container));
+  };
+
+  window.addEventListener('load', renderVisibleTurnstileWidgets);
+
+  document.querySelectorAll('[data-protected-form]').forEach((form) => {
+    const status = form.querySelector('[data-form-status]');
+    const submitButton = form.querySelector('[type="submit"]');
+    const success = form.parentElement?.querySelector('[data-form-success]');
+    const turnstileContainer = form.querySelector('[data-turnstile-widget]');
+    const defaultSubmitLabel = submitButton?.dataset.submitLabel || submitButton?.textContent.trim() || 'Submit';
+
+    const setContext = () => {
+      const source = form.querySelector('[name="source"]');
+      const userAgent = form.querySelector('[name="user_agent"]');
+      if (source) source.value = `${document.title} — ${window.location.href}`;
+      if (userAgent) userAgent.value = navigator.userAgent;
+    };
+
+    const setStatus = (message, modifier = '') => {
+      if (!status) return;
+      status.className = modifier
+        ? `protected-form__status protected-form__status--${modifier}`
+        : 'protected-form__status';
+      status.textContent = message;
+    };
+
+    setContext();
+
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const data = new FormData(contactForm);
-      const name = String(data.get('name') || '').trim();
-      const email = String(data.get('email') || '').trim();
-      const message = String(data.get('message') || '').trim();
-      const subject = `Website message from ${name}`;
-      const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-      window.location.href = `mailto:info@cutcircle.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setStatus('');
+
+      if (!form.reportValidity()) return;
+
+      const endpoint = form.getAttribute('action')?.trim();
+      if (!endpoint) {
+        setStatus('This form is not configured yet. Please try again later.', 'error');
+        return;
+      }
+
+      const turnstileToken = form.querySelector('[name="cf-turnstile-response"]')?.value.trim();
+      if (turnstileContainer && !turnstileToken) {
+        const verificationLoaded = window.turnstile && turnstileContainer.dataset.turnstileFailed !== 'true';
+        const message = verificationLoaded
+          ? 'Please complete the verification.'
+          : 'Verification could not load. Please refresh the page and try again.';
+        setStatus(message, 'error');
+        return;
+      }
+
+      setContext();
+      setStatus('Sending…');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.error || 'Submission failed');
+        }
+
+        form.reset();
+        setContext();
+        resetTurnstileWidget(turnstileContainer);
+        setStatus('');
+
+        if (success) {
+          form.hidden = true;
+          success.hidden = false;
+          success.focus();
+          const dialog = form.closest('dialog');
+          if (dialog && success.id) dialog.setAttribute('aria-describedby', success.id);
+        } else {
+          setStatus('Thank you. Your submission has been received.', 'success');
+        }
+      } catch (error) {
+        console.error('Form submission failed:', error);
+        resetTurnstileWidget(turnstileContainer);
+        setStatus('Sorry, your submission could not be sent. Please try again.', 'error');
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = defaultSubmitLabel;
+      }
+    });
+  });
+
+  const subscribeModal = document.querySelector('#subscribe-modal');
+  if (subscribeModal) {
+    const subscribeForm = subscribeModal.querySelector('[data-protected-form]');
+    const subscribeSuccess = subscribeModal.querySelector('[data-form-success]');
+    const firstName = subscribeModal.querySelector('[name="first_name"]');
+    let returnFocusElement;
+
+    const openSubscribeModal = (trigger) => {
+      returnFocusElement = trigger;
+      subscribeForm.hidden = false;
+      subscribeSuccess.hidden = true;
+      subscribeModal.setAttribute('aria-describedby', 'subscribe-intro');
+      const status = subscribeForm.querySelector('[data-form-status]');
+      status.className = 'protected-form__status';
+      status.textContent = '';
+      if (!subscribeModal.open) subscribeModal.showModal();
+      document.body.classList.add('subscribe-modal-open');
+      window.requestAnimationFrame(() => {
+        renderTurnstileWidget(subscribeForm.querySelector('[data-turnstile-widget]'));
+        firstName?.focus();
+      });
+    };
+
+    document.querySelectorAll('[data-subscribe-open]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openSubscribeModal(trigger));
+    });
+
+    subscribeModal.querySelectorAll('[data-subscribe-close]').forEach((control) => {
+      control.addEventListener('click', () => subscribeModal.close());
+    });
+
+    subscribeModal.addEventListener('click', (event) => {
+      if (event.target === subscribeModal) subscribeModal.close();
+    });
+
+    subscribeModal.addEventListener('close', () => {
+      document.body.classList.remove('subscribe-modal-open');
+      returnFocusElement?.focus();
+      returnFocusElement = undefined;
     });
   }
 

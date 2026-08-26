@@ -6,6 +6,12 @@ baseurl: /Cut-Circle-Website
 lang: en
 permalink: pretty
 
+# Public form configuration. Keep the Turnstile secret, Google Form URL, and
+# Google Forms entry IDs in the Cloudflare Worker rather than in this file.
+forms:
+  worker_url: "https://cut-circle-forms.benjaminory.workers.dev"
+  turnstile_sitekey: "0x4AAAAAAEcmuiHdbLdkXRbf"
+
 collections:
   recordings:
     output: true
@@ -76,3 +82,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - migration
+  - cloudflare

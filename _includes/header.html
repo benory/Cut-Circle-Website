@@ -34,12 +34,11 @@
       </ul>
     </nav>
 
-    {% assign subscribe_item = site.data.navigation | where: 'label', 'Subscribe' | first %}
     <div class="header-actions">
       <a class="search-link" href="{{ '/search/' | relative_url }}" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
       </a>
-      <a class="header-subscribe" href="{{ subscribe_item.url }}">Subscribe</a>
+      <button class="header-subscribe" type="button" data-subscribe-open aria-haspopup="dialog" aria-controls="subscribe-modal">Subscribe</button>
       <a class="donate-button" href="{{ '/support/' | relative_url }}">Donate</a>
     </div>
   </div>

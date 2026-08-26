@@ -3,20 +3,39 @@ layout: default
 ---
 <article class="contact-page">
   <h1 class="screen-reader-text">{{ page.title }}</h1>
-  <form class="contact-form content-width" action="mailto:info@cutcircle.org" method="post" enctype="text/plain" data-contact-form>
-    <div class="contact-form__field">
-      <label for="contact-name">Name</label>
-      <input id="contact-name" name="name" type="text" placeholder="Name" autocomplete="name" required>
+  <form class="contact-form content-width" action="{{ site.forms.worker_url | escape }}" method="post" data-protected-form data-contact-form novalidate>
+    <input type="hidden" name="category" value="Contact">
+    <input type="hidden" name="source" value="">
+    <input type="hidden" name="user_agent" value="">
+    <div class="form-honeypot" aria-hidden="true">
+      <label for="contact-website">Leave this field empty</label>
+      <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
     </div>
     <div class="contact-form__field">
-      <label for="contact-email">Email</label>
-      <input id="contact-email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+      <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+      <input id="contact-name" name="name" type="text" placeholder="Name" autocomplete="name" maxlength="120" required>
     </div>
     <div class="contact-form__field">
-      <label for="contact-message">Message</label>
-      <textarea id="contact-message" name="message" placeholder="Message" rows="4" required></textarea>
+      <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+      <input id="contact-email" name="email" type="email" placeholder="Email" autocomplete="email" maxlength="254" required>
     </div>
-    <button type="submit">Send</button>
-    <p class="contact-form__note">Send opens this message in your email application. Nothing is transmitted until you send it there. You can also write directly to <a href="mailto:info@cutcircle.org">info@cutcircle.org</a>.</p>
+    <div class="contact-form__field">
+      <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+      <textarea id="contact-message" name="message" placeholder="Message" rows="4" maxlength="5000" required></textarea>
+    </div>
+    {% if site.forms.turnstile_sitekey != empty %}
+    <div class="contact-form__field protected-form__turnstile">
+      <div data-turnstile-widget data-sitekey="{{ site.forms.turnstile_sitekey | escape }}" data-action="contact"></div>
+    </div>
+    {% else %}
+    <p class="protected-form__config-note" role="note">Verification will appear after the form is configured.</p>
+    {% endif %}
+    <button type="submit" data-submit-label="Send message">Send message</button>
+    <div class="protected-form__status" data-form-status aria-live="polite"></div>
+    <p class="contact-form__note">Fields marked * are required. You can also write directly to <a href="mailto:info@cutcircle.org">info@cutcircle.org</a>.</p>
   </form>
+  <div class="contact-form contact-form__success content-width" data-form-success tabindex="-1" hidden>
+    <h2>Thank you.</h2>
+    <p>Your message has been sent to Cut Circle.</p>
+  </div>
 </article>
