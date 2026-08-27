@@ -16,7 +16,7 @@
       <ul class="primary-nav__list">
         {% for item in site.data.navigation %}
           {% unless item.label == 'Subscribe' %}
-            <li class="primary-nav__item{% if item.children %} has-submenu{% endif %}">
+            <li class="primary-nav__item{% if item.children %} has-submenu{% endif %}{% if item.narrow_only %} primary-nav__item--narrow-only{% endif %}">
               <a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if item.external and item.new_window != false %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
               {% if item.children %}
                 <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show {{ item.label }} menu">
@@ -39,7 +39,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
       </a>
       <button class="header-subscribe" type="button" data-subscribe-open aria-haspopup="dialog" aria-controls="subscribe-modal">Subscribe</button>
-      <a class="donate-button" href="{{ '/support/' | relative_url }}">Donate</a>
+      <a class="donate-button" href="https://www.paypal.com/donate/?hosted_button_id=ETC6XSS6YJEWU" target="_blank" rel="noopener">Donate</a>
     </div>
   </div>
 </header>

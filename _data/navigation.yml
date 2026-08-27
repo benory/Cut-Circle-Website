@@ -32,6 +32,10 @@
 - label: Scores
   url: https://www.josqu.in/repertoire/?texted=true
   external: true
+- label: Donate
+  url: https://www.paypal.com/donate/?hosted_button_id=ETC6XSS6YJEWU
+  external: true
+  narrow_only: true
 - label: Subscribe
   url: "#subscribe"
   external: false

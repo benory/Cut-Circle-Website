@@ -1,0 +1,21 @@
+---
+layout: null
+title: Donate to Cut Circle
+permalink: /support/
+redirect_to: https://www.paypal.com/donate/?hosted_button_id=ETC6XSS6YJEWU
+sitemap: false
+---
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate to Cut Circle</title>
+    <link rel="canonical" href="{{ page.redirect_to }}">
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+  </head>
+  <body>
+    <p>Continue to <a href="{{ page.redirect_to }}">Cut Circle’s secure PayPal donation page</a>.</p>
+    <script>window.location.replace({{ page.redirect_to | jsonify }});</script>
+  </body>
+</html>

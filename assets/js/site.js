@@ -482,23 +482,4 @@
     });
   }
 
-  const givingForm = document.querySelector('[data-giving-form]');
-  if (givingForm) {
-    const amountOptions = [...givingForm.querySelectorAll('input[name="amount"]')];
-    const customAmount = givingForm.querySelector('[name="custom_amount"]');
-
-    customAmount.addEventListener('input', () => {
-      if (customAmount.value) amountOptions.forEach((option) => { option.checked = false; });
-    });
-    amountOptions.forEach((option) => option.addEventListener('change', () => { customAmount.value = ''; }));
-
-    givingForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const selected = amountOptions.find((option) => option.checked)?.value;
-      const amount = customAmount.value ? `$${customAmount.value}` : selected || 'an amount to be determined';
-      const subject = `Supporting Cut Circle — ${amount}`;
-      const body = `I would like to arrange a gift of ${amount} to Cut Circle. Please send me secure payment instructions.`;
-      window.location.href = `mailto:info@cutcircle.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
-  }
 })();

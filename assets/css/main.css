@@ -125,6 +125,7 @@ h1, h2, h3 { font-weight: 400; }
 .primary-nav__list, .submenu { margin: 0; padding: 0; list-style: none; }
 .primary-nav__list { display: flex; align-items: center; }
 .primary-nav__item { position: relative; display: flex; align-items: center; }
+.primary-nav__item.primary-nav__item--narrow-only { display: none; }
 
 .primary-nav__item > a {
   display: flex;
@@ -669,7 +670,7 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
 .about-gallery img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; box-shadow: none; }
 .about-lightbox {
   width: fit-content;
-  height: auto;
+  height: fit-content;
   max-width: 82vw;
   max-height: 82vh;
   padding: 0;
@@ -956,40 +957,6 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
 .subscribe-form__success-title { margin: 0 0 8px; font: 400 30px/1.1 "Adobe Jenson", Georgia, serif; }
 .subscribe-form__success p:last-child { margin: 0; color: #555; font-size: 14px; }
 
-.support-page { padding-bottom: 74px; background: #222; }
-.support-hero {
-  min-height: 330px;
-  background: linear-gradient(rgba(15,15,15,.18), rgba(15,15,15,.18)), url("../images/support-hero.jpg") center / cover no-repeat;
-}
-.support-donation { width: min(calc(100% - 48px), 798px); margin-top: -167px; position: relative; z-index: 1; }
-.support-card { padding: 40px; border-radius: 29px; color: #222; background: #fff; box-shadow: var(--shadow); }
-.support-card > h1 { margin: 0 0 9px; font: 400 clamp(38px, 5vw, 52px)/1 "Adobe Jenson", Georgia, serif; }
-.support-card > p { max-width: 630px; margin: 0 0 31px; color: #444; line-height: 1.55; }
-.giving-form fieldset { margin: 0; padding: 0; border: 0; }
-.giving-form legend { width: 100%; margin: 0 0 13px; padding-bottom: 8px; border-bottom: 1px solid #ddd; font-size: 18px; font-weight: 700; }
-.giving-form__amounts { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
-.giving-form__amounts input { position: absolute; opacity: 0; pointer-events: none; }
-.giving-form__amounts span {
-  display: block;
-  min-width: 77px;
-  padding: 8px 13px;
-  border: 1px solid #ccc;
-  color: #333;
-  background: #eee;
-  text-align: center;
-  cursor: pointer;
-}
-.giving-form__amounts input:checked + span { border-color: var(--accent); color: #fff; background: var(--accent); }
-.giving-form__amounts input:focus-visible + span { outline: 2px solid #111; outline-offset: 2px; }
-.giving-form__custom { display: block; margin-bottom: 5px; font-weight: 700; }
-.giving-form__custom-row { width: min(100%, 250px); height: 43px; display: grid; grid-template-columns: 38px 1fr; margin-bottom: 27px; border: 1px solid #ccc; }
-.giving-form__custom-row span { display: grid; place-items: center; border-right: 1px solid #ccc; background: #eee; }
-.giving-form__custom-row input { min-width: 0; border: 0; padding: 8px 12px; color: #222; background: #fff; }
-.giving-form button { padding: 13px 38px; border: 0; color: #fff; background: #0878b8; cursor: pointer; }
-.giving-form button:hover, .giving-form button:focus-visible { background: #096ca3; }
-.giving-form__note { max-width: 610px; margin: 18px 0 0; color: #666; font-size: 13px; line-height: 1.5; }
-.support-disclaimer { margin: 20px 0 0; color: #aaa; font-size: 14px; font-style: italic; line-height: 1.55; }
-
 .legacy-page { padding-top: 28px; padding-bottom: 88px; }
 .legacy-page a { color: #36a9cf; }
 .legacy-page h1,
@@ -1178,6 +1145,7 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   .header-actions { gap: 6px; }
   .header-subscribe { min-width: auto; padding: 13px 12px; font-size: 11px; }
   .donate-button { display: none; }
+  .primary-nav__item.primary-nav__item--narrow-only { display: grid; }
   .home-hero { min-height: 500px; background-position: 62% center; }
   .home-hero__panel { width: 100%; padding: 30px 26px 36px; }
   .home-hero h1 { font-size: 42px; }
@@ -1294,13 +1262,6 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   .subscribe-modal__header h2 { font-size: 27px; }
   .subscribe-form { padding: 20px 20px 22px; }
   .subscribe-form__names { grid-template-columns: 1fr; gap: 0; }
-  .support-page { padding-bottom: 55px; }
-  .support-hero { min-height: 240px; }
-  .support-donation { width: calc(100% - 28px); margin-top: -85px; }
-  .support-card { padding: 28px 22px; border-radius: 20px; }
-  .support-card > h1 { font-size: 39px; }
-  .giving-form__amounts { display: grid; grid-template-columns: repeat(2, 1fr); }
-  .giving-form__amounts span { min-width: 0; }
   .legacy-page { width: calc(100% - 36px); margin: 0 auto; padding-top: 24px; padding-bottom: 65px; }
   .listen-page__cover { margin-top: 0; }
   .listen-selections > li { padding-inline: 35px 0; }
