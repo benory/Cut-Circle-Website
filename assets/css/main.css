@@ -824,7 +824,7 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
 .artist-profile--catalogue .artist-profile__biography { min-height: 240px; font-size: 18px; }
 
 .contact-page { min-height: 528px; padding: 42px 0 64px; }
-.contact-form { width: min(calc(100% - 48px), var(--narrow)); padding-top: 0; }
+.contact-form { width: min(calc(100% - 48px), 640px); padding-top: 0; }
 .contact-form__field { margin-bottom: 9px; }
 .contact-form label { display: block; margin-bottom: 3px; }
 .contact-form input,
@@ -1031,7 +1031,6 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   .feasting-page .page-header,
   .feasting-page .learn-page__layout,
   .artists-page > .content-width,
-  .contact-form,
   .listen-page,
   .cds-page {
     margin-left: max(24px, calc((100% - var(--narrow)) / 2 - var(--narrow-offset)));
