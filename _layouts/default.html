@@ -20,8 +20,15 @@
     <meta name="twitter:description" content="{{ meta_description | escape }}">
     <meta name="twitter:image" content="{{ social_image | absolute_url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+    {% assign asset_version = site.time | date: '%s' %}
+    <style>
+      .primary-nav__item.primary-nav__item--narrow-only { display: none; }
+      @media (max-width: 560px) {
+        .primary-nav__item.primary-nav__item--narrow-only { display: grid; }
+      }
+    </style>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ asset_version }}">
+    <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ asset_version }}" defer></script>
     {% if site.forms.turnstile_sitekey != empty %}
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
     {% endif %}
