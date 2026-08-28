@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#1a1a1a">
+    <link rel="icon" type="image/png" sizes="606x606" href="{{ '/assets/images/favicon.png' | relative_url }}">
     <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
     {% assign meta_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 180 %}
     {% assign social_image = page.image | default: '/assets/images/home-hero.webp' %}

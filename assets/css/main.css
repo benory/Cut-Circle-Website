@@ -1246,7 +1246,6 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   .artists-rail section + section { margin-top: 0; }
   .artists-rail .about-connect { grid-column: 1 / -1; }
   .artist-profile__header { padding-block: 30px 25px; }
-  .artist-profile__header h1 span { display: block; margin-top: 7px; font-size: .63em; }
   .artist-profile__layout, .artist-profile--catalogue .artist-profile__layout { grid-template-columns: 1fr; padding-top: 34px; padding-bottom: 70px; }
   .artist-profile__portrait { position: static; }
   .artist-profile__portrait img { max-width: 360px; margin-inline: auto; }
