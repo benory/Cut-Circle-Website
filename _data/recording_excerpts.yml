@@ -14,7 +14,7 @@ josquin-i-motets-et-chansons:
   - file: /assets/audio/recordings/josquin-i-motets-et-chansons/track-13.mp3
   - file: /assets/audio/recordings/josquin-i-motets-et-chansons/track-14.mp3
   - file: /assets/audio/recordings/josquin-i-motets-et-chansons/track-15.mp3
-  -
+  - file: /assets/audio/recordings/josquin-i-motets-et-chansons/track-16.mp3
 messes-anonymes:
   - file: /assets/audio/recordings/messes-anonymes/track-01.mp3
   - file: /assets/audio/recordings/messes-anonymes/track-02.mp3
@@ -58,11 +58,11 @@ guillaume-du-fay-the-tenor-masses-les-messes-a-teneur:
   - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-04.mp3
   - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-05.mp3
   - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-06.mp3
-  -
-  -
-  -
-  -
-  -
+  - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-07.mp3
+  - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-08.mp3
+  - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-09.mp3
+  - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-10.mp3
+  - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-11.mp3
   - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-12.mp3
   - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-13.mp3
   - file: /assets/audio/recordings/guillaume-du-fay-the-tenor-masses-les-messes-a-teneur/track-14.mp3
@@ -90,20 +90,20 @@ de-orto-and-josquin-music-in-the-sistine-chapel-around-1490:
   - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-12.mp3
   - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-13.mp3
   - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-14.mp3
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-15.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-16.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-17.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-18.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-19.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-20.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-21.mp3
   - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-22.mp3
   - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-23.mp3
-  -
-  -
-  -
-  -
-  -
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-24.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-25.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-26.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-27.mp3
+  - file: /assets/audio/recordings/de-orto-and-josquin-music-in-the-sistine-chapel-around-1490/track-28.mp3
 sounds-of-renaissance-florence:
   -
   -

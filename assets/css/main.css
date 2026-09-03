@@ -213,6 +213,7 @@ h1, h2, h3 { font-weight: 400; }
   z-index: -1;
   inset: 0;
   background: #330f17 url("../images/home-hero-overlay.jpg") center / cover no-repeat;
+  mix-blend-mode: multiply;
   opacity: .89;
 }
 
@@ -718,7 +719,12 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   width: min(calc(100% - 48px), var(--narrow));
   margin-inline: auto;
 }
-.auditions-page .page-header { padding: 72px 40px 62px; }
+.auditions-page .page-header {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
 .auditions-page .page-header > .content-width { width: 100%; }
 .feasting-page .learn-page { padding-top: 20px; }
 .feasting-page .page-header,
@@ -728,6 +734,7 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
 }
 .feasting-page .page-header { padding: 72px 40px 62px; }
 .feasting-page .page-header > .content-width { width: 100%; }
+.feasting-page .page-header h1 { font-size: clamp(46px, 5vw, 56px); }
 
 .artists-page { padding-top: 20px; }
 .artists-page > .content-width {
@@ -1168,6 +1175,7 @@ a.recording-label-button:hover, a.recording-label-button:focus-visible { backgro
   .josquamp-page .page-header,
   .auditions-page .page-header,
   .feasting-page .page-header { padding: 56px 24px 48px; }
+  .auditions-page .page-header { min-height: 220px; padding: 24px; }
   .reviews-archive .archive-grid { grid-template-columns: 1fr; padding-top: 32px; }
   .media-archive .archive-grid { padding-top: 32px; }
   .archive-rail { grid-template-columns: 1fr 1fr; }
