@@ -1,3 +1,24 @@
+josquin-ii:
+  - file: /assets/audio/recordings/josquin-ii/track-01.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-02.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-03.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-04.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-05.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-06.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-07.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-08.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-09.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-10.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-11.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-12.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-13.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-14.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-15.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-16.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-17.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-18.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-19.mp3
+  - file: /assets/audio/recordings/josquin-ii/track-20.mp3
 josquin-i-motets-et-chansons:
   - file: /assets/audio/recordings/josquin-i-motets-et-chansons/track-01.mp3
   - file: /assets/audio/recordings/josquin-i-motets-et-chansons/track-02.mp3
